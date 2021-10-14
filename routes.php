@@ -1,5 +1,6 @@
 <?php
-$controllers = array('home'=>['home','error'],
+$controllers = array(
+'home'=>['home','error'],
 'page1'=>['index'],
 'page2'=>['index'],
 'page3'=>['index']);
@@ -7,7 +8,8 @@ $controllers = array('home'=>['home','error'],
 function call($controller,$action){
     require_once("controllers/".$controller."_controller.php");
     switch($controller){
-        case "home": $controller = new HomeController();break;
+        case "home": require_once("models/fh_model.php");
+            $controller = new HomeController();break;
         
     }
     $controller->{$action}();

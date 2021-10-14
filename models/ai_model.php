@@ -14,7 +14,7 @@ class aiModel{
         $result = $conn->query($sql);
         $my_row = $result->fetch_assoc();
 
-        $id = $my_row[id];
+        $id = $my_row['id'];
 
         require("connection_close.php");
 
