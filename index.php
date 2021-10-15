@@ -81,6 +81,8 @@ else{
                 <ul class="navlinks">
                     <li><a href="?controller=pages&action=home"> Home </a><li>
                     <li><a href="?controller=Object&action=index"> Object </a><li>
+                    <li><a href="?controller=DailyLog&action=index"> DailyLog </a><li>
+                    <li><a href="?controller=NesObject&action=index"> NecessaryObject </a><li>
                 </ul><br>
                 <?php echo "Status = ".$controller."  |  ".$action;?>
             </nav>
