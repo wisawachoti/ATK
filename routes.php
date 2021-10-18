@@ -1,7 +1,7 @@
 <?php
 $controllers = array(
 'home'=>['home','error'],
-'page1'=>['index'],
+'fieldhospital'=>['index','an'],
 'page2'=>['index'],
 'page3'=>['index']);
 
@@ -9,7 +9,12 @@ function call($controller,$action){
     require_once("controllers/".$controller."_controller.php");
     switch($controller){
         case "home": require_once("models/fh_model.php");
+                     require_once("models/ai_model.php");
             $controller = new HomeController();break;
+            
+        case "fieldhospital": require_once("models/fh_model.php");
+                               require_once("models/ai_model.php");
+            $controller = new fhController();break;
         
     }
     $controller->{$action}();

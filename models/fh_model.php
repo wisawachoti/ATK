@@ -136,4 +136,16 @@ class fh_Model
 
         return $fhList;
     }
+
+    public static function Add($field_hospital_id, $fh_name, $green, $yellow, $red)
+    {
+        require("connection_connect.php");
+        $sql = "INSERT INTO `Field_hospital`(`field_hospital_id`, `fh_name`, `green`, `yellow`, `red`) 
+        VALUES($field_hospital_id, $fh_name, $green, $yellow, $red)";
+        $result = $conn->query($sql);
+        require("connection_close.php");
+        return ;
+    }
+
+
 }

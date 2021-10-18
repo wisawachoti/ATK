@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>Hospital</title>
+  <title>Field Hospital</title>
   <!-- Favicon -->
   <link rel="icon" href="assets/img/brand/favicon.png" type="image/png">
   <!-- Fonts -->
@@ -39,19 +39,19 @@
         <div class="collapse navbar-collapse" id="sidenav-collapse-main">
           <!-- Nav items -->
           <ul class="navbar-nav">
+
             <li class="nav-item">
-              <a class="nav-link active" href="?controller=home&action=home">
+              <a class="nav-link " href="?controller=home&action=home">
                 <img src="assets/img/brand/monitor.png" class="navbar-brand-img" alt="...">
                 <span class="nav-link-text">| Dashboard</span>
               </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="?controller=fieldhospital&action=index">
-              <img src="assets/img/brand/hospital-building.png" class="navbar-brand-img" alt="...">
+              <a class="nav-link active" href="?controller=fieldhospital&action=index">
+                <img src="assets/img/brand/hospital-building.png" class="navbar-brand-img" alt="...">
                 <span class="nav-link-text">| Field Hospital</span>
               </a>
-              
             </li>
 
             <li class="nav-item">
@@ -108,9 +108,8 @@
       </div>
     </nav>
 
-
-    <!-- Header -->
-    <div class="header bg-primary pb-6">
+       <!-- Header -->
+       <div class="header bg-primary pb-6">
       <div class="container-fluid">
         <div class="header-body">
 
@@ -127,18 +126,18 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">ยอดผู้ติดเชื้อสะสม</h5>
-                      <span class="h2 font-weight-bold mb-0">350,897</span>
+                      <h5 class="card-title text-uppercase text-muted mb-0">จำนวนโรงพยาบาลสนาม</h5>
+                      <span class="h2 font-weight-bold mb-0">2</span>
                     </div>
                     <div class="col-auto">
-                        <img src="assets/img/brand/coronavirus.png" class="navbar-brand-img" alt="...">
+                      <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
+                    
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
-
             <div class="col-xl-3 col-md-6">
               <div class="card card-stats">
 
@@ -147,7 +146,7 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">ผู้ติดเชื้อ(สีเขียว)</h5>
+                      <h5 class="card-title text-uppercase text-muted mb-0">เตียงที่วาง(สีเขียว)</h5>
                       <span class="h2 font-weight-bold mb-0">2,356</span>
                     </div>
                     <div class="col-auto">
@@ -167,7 +166,7 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">ผู้ติดเชื้อ(สีเหลือง)</h5>
+                      <h5 class="card-title text-uppercase text-muted mb-0">เตียงที่วาง(สีเหลือง)</h5>
                       <span class="h2 font-weight-bold mb-0">924</span>
                     </div>
                     <div class="col-auto">
@@ -185,7 +184,7 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">ผู้ติดเชื้อ(สีแดง)</h5>
+                      <h5 class="card-title text-uppercase text-muted mb-0">เตียงที่วาง(สีแดง)</h5>
                       <span class="h2 font-weight-bold mb-0">500</span>
                     </div>
                     <div class="col-auto">
@@ -202,8 +201,6 @@
       </div>
     </div>
 
-
-
     <!-- Page content -->
     <div class="container-fluid mt--6">
       <div class="row">
@@ -214,6 +211,9 @@
               <div class="row align-items-center">
                 <div class="col">
                   <h3 class="mb-0">โรงพยาบาลสนาม</h3>
+                </div>
+                <div class="col text-right">
+                  <a href="?controller=fieldhospital&action=an" class="btn btn-sm btn-primary">new</a>
                 </div>
               </div>
             </div>
