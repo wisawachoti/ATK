@@ -48,22 +48,22 @@
 
             <li class="nav-item">
               <a class="nav-link" href="?controller=fieldhospital&action=index">
-              <img src="assets/img/brand/hospital-building.png" class="navbar-brand-img" alt="...">
+                <img src="assets/img/brand/hospital-building.png" class="navbar-brand-img" alt="...">
                 <span class="nav-link-text">| Field Hospital</span>
               </a>
-              
+
             </li>
 
             <li class="nav-item">
               <a class="nav-link" href="#">
-              <img src="assets/img/brand/people.png" class="navbar-brand-img" alt="...">
+                <img src="assets/img/brand/people.png" class="navbar-brand-img" alt="...">
                 <span class="nav-link-text">| Patient</span>
               </a>
             </li>
 
             <li class="nav-item">
               <a class="nav-link" href="#">
-              <img src="assets/img/brand/report.png" class="navbar-brand-img" alt="...">
+                <img src="assets/img/brand/report.png" class="navbar-brand-img" alt="...">
                 <span class="nav-link-text">| Tele medicine</span>
               </a>
             </li>
@@ -95,8 +95,8 @@
                   <span class="input-group-text"><i class="fas fa-search"></i></span>
                 </div>
                 <input class="form-control" placeholder="Search" type="text" name="key">
-                <input type="hidden" name="controller" value="home"/>
-                <input type="hidden" name="action" value="search"/>
+                <input type="hidden" name="controller" value="home" />
+                <input type="hidden" name="action" value="search" />
               </div>
             </div>
 
@@ -119,21 +119,21 @@
 
 
           <!-- Card stats -->
-          <div class="row">
+          <div class="row ">
 
 
-            <div class="col-xl-3 col-md-6">
+            <div class="col-xl-3 col-md-6 mt-3">
               <div class="card card-stats">
 
                 <!-- Card body -->
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">ยอดผู้ติดเชื้อสะสม</h5>
-                      <span class="h2 font-weight-bold mb-0">350,897</span>
+                      <h5 class="card-title text-uppercase text-muted mb-0">โรงพยาบาลสนาม</h5>
+                      <span class="h2 font-weight-bold mb-0">2</span>
                     </div>
                     <div class="col-auto">
-                        <img src="assets/img/brand/fever.png" class="navbar-brand-img" alt="...">
+                      <img src="assets/img/brand/hospital-building-2.png" class="navbar-brand-img" alt="...">
                     </div>
                   </div>
                 </div>
@@ -141,7 +141,7 @@
             </div>
 
 
-            <div class="col-xl-3 col-md-6">
+            <div class="col-xl-3 col-md-6 mt-3">
               <div class="card card-stats">
 
 
@@ -149,19 +149,17 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">ผู้ติดเชื้อ(สีเขียว)</h5>
+                      <h5 class="card-title text-uppercase text-muted mb-0">เตียงที่วาง(สีเขียว)</h5>
                       <span class="h2 font-weight-bold mb-0">2,356</span>
                     </div>
                     <div class="col-auto">
-                   
-                      <img src="assets/img/brand/sick-3.png" class="navbar-brand-img" alt="...">
-                 
+                      <img src="assets/img/brand/bed-2.png" class="navbar-brand-img" alt="...">
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-md-6">
+            <div class="col-xl-3 col-md-6 mt-3">
               <div class="card card-stats">
 
 
@@ -169,27 +167,27 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">ผู้ติดเชื้อ(สีเหลือง)</h5>
+                      <h5 class="card-title text-uppercase text-muted mb-0">เตียงที่วาง(สีเหลือง)</h5>
                       <span class="h2 font-weight-bold mb-0">924</span>
                     </div>
                     <div class="col-auto">
-                        <img src="assets/img/brand/sick-4.png" class="navbar-brand-img" alt="...">
+                      <img src="assets/img/brand/bed-3.png" class="navbar-brand-img" alt="...">
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-md-6">
+            <div class="col-xl-3 col-md-6 mt-3">
               <div class="card card-stats">
                 <!-- Card body -->
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">ผู้ติดเชื้อ(สีแดง)</h5>
+                      <h5 class="card-title text-uppercase text-muted mb-0">เตียงที่วาง(สีแดง)</h5>
                       <span class="h2 font-weight-bold mb-0">500</span>
                     </div>
                     <div class="col-auto">
-                        <img src="assets/img/brand/sick-5.png" class="navbar-brand-img" alt="...">
+                      <img src="assets/img/brand/bed-4.png" class="navbar-brand-img" alt="...">
                     </div>
                   </div>
                 </div>
@@ -222,23 +220,26 @@
                   <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Name</th>
-                    <th scope="col">green</th>
-                    <th scope="col">yellow</th>
-                    <th scope="col">red</th>
+                    <th scope="col">Green</th>
+                    <th scope="col">Yellow</th>
+                    <th scope="col">Red</th>
+                    <th scope="col">Agency</th>
+
                   </tr>
                 </thead>
                 <tbody>
-                <?php foreach ($fhlList as $data) {
-                  echo "<tr> 
+                  <?php foreach ($fhlList as $data) {
+                    echo "<tr> 
                 <td>$data->field_hospital_id</td> 
                 <td>$data->fh_name</td> 
                 <td>$data->green</td> 
                 <td>$data->yellow </td> 
                 <td>$data->red</td> 
+                <td>$data->agency</td> 
               </tr>";
-    }
-    echo "</table>";
-    ?>
+                  }
+                  echo "</table>";
+                  ?>
                 </tbody>
               </table>
             </div>

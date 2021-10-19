@@ -113,17 +113,17 @@
     </nav>
 
        <!-- Header -->
-       <div class="header bg-primary pb-6">
-      <div class="container-fluid">
-        <div class="header-body">
+    <div class="header bg-primary pb-6">
+      <div class="container-fluid ">
+        <div class="header-body ">
 
 
 
           <!-- Card stats -->
-          <div class="row">
+          <div class="row ">
 
 
-            <div class="col-xl-3 col-md-6">
+            <div class="col-xl-3 col-md-6 mt-3">
               <div class="card card-stats">
 
                 <!-- Card body -->
@@ -140,7 +140,9 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-md-6">
+
+            
+            <div class="col-xl-3 col-md-6 mt-3">
               <div class="card card-stats">
 
 
@@ -158,7 +160,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-md-6">
+            <div class="col-xl-3 col-md-6 mt-3">
               <div class="card card-stats">
 
 
@@ -176,7 +178,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-md-6">
+            <div class="col-xl-3 col-md-6 mt-3">
               <div class="card card-stats">
                 <!-- Card body -->
                 <div class="card-body">
@@ -201,7 +203,7 @@
     <div class="container-fluid mt--6">
       <div class="row">
 
-        <div class="col-xl-8">
+        <div class="col-xl-12">
           <div class="card">
             <div class="card-header border-0">
               <div class="row align-items-center">
@@ -220,9 +222,12 @@
                   <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Name</th>
-                    <th scope="col">green</th>
-                    <th scope="col">yellow</th>
-                    <th scope="col">red</th>
+                    <th scope="col">Green</th>
+                    <th scope="col">Yellow</th>
+                    <th scope="col">Red</th>
+                    <th scope="col">Agency</th>
+                    <th scope="col">Update</th>
+                    <th scope="col">Delete</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -233,6 +238,7 @@
                 <td>$data->green</td> 
                 <td>$data->yellow </td> 
                 <td>$data->red</td> 
+                <td>$data->agency</td> 
               </tr>";
     }
     echo "</table>";

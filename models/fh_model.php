@@ -3,19 +3,20 @@
 class fh_Model
 {
 
-    public $field_hospital_id, $fh_name, $green, $yellow, $red;
+    public $field_hospital_id, $fh_name, $green, $yellow, $red ,$agency;
 
 
 
     // =============================================================================================================================================__construct
 
-    public function __construct($field_hospital_id, $fh_name, $green, $yellow, $red)
+    public function __construct($field_hospital_id, $fh_name, $green, $yellow, $red,$agency)
     {
         $this->field_hospital_id =$field_hospital_id;
         $this->fh_name = $fh_name;
         $this->green  = $green;
         $this->yellow  = $yellow;
         $this->red  =  $red;
+        $this->agency =  $agency;
     }
 
     // =============================================================================================================================================__get
@@ -47,8 +48,8 @@ class fh_Model
             $fhList = [];
             require("connection_connect.php");
 
-            $sql = "SELECT `field_hospital_id`,`fh_name`,`green`,`yellow`,`red` FROM Field_hospital 
-             WHERE (field_hospital_id like '%$key%' or fh_name like '%$key%') ";
+            $sql = "SELECT `field_hospital_id`,`fh_name`,`green`,`yellow`,`red`,a.agency_name as agency FROM Field_hospital as f INNER JOIN agency as a ON f.agency_id = a.agency_id  
+             WHERE (field_hospital_id like '%$key%' or fh_name like '%$key%' or a.agency_name like '%$key%') ";
             $result = $conn->query($sql);
             while($my_row = $result->fetch_assoc())
             {
@@ -57,9 +58,10 @@ class fh_Model
                 $green = $my_row['green'];
                 $yellow = $my_row['yellow'];
                 $red = $my_row['red'];
+                $agency = $my_row['agency'];
     
 
-                $fhList[] = new  fh_Model($field_hospital_id, $fh_name, $green, $yellow, $red);
+                $fhList[] = new  fh_Model($field_hospital_id, $fh_name, $green, $yellow, $red,$agency);
 
             }
             require("connection_close.php");
@@ -117,7 +119,7 @@ class fh_Model
 
         $fhList = [];
         require("connection_connect.php");
-        $sql = "SELECT `field_hospital_id`,`fh_name`,`green`,`yellow`,`red` FROM Field_hospital";
+        $sql = "SELECT `field_hospital_id`,`fh_name`,`green`,`yellow`,`red`,a.agency_name as agency FROM Field_hospital as f INNER JOIN agency as a ON f.agency_id = a.agency_id ";
         $result = $conn->query($sql);
         while ($my_row = $result->fetch_assoc()) {
 
@@ -126,9 +128,10 @@ class fh_Model
             $green = $my_row['green'];
             $yellow = $my_row['yellow'];
             $red = $my_row['red'];
+            $agency = $my_row['agency'];
 
 
-            $fhList[] = new  fh_Model($field_hospital_id, $fh_name, $green, $yellow, $red);
+            $fhList[] = new  fh_Model($field_hospital_id, $fh_name, $green, $yellow, $red, $agency);
         }
         require("connection_close.php");
 

@@ -8,6 +8,12 @@ class fhController{
         
     }
 
+    public function BACK(){
+        $fhlList = fh_Model::getAll();
+        require_once('views/fieldhospital/index.php');
+        
+    }
+
     public function search()
     {
         $key = $_GET['key'];
@@ -17,6 +23,7 @@ class fhController{
 
     public function an(){
         $id = aiModel::getid("Field_hospital","field_hospital_id");
+        $agList = ag_Model::getAll();
         require_once('views/fieldhospital/add.php');
     }
 }
