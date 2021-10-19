@@ -1,7 +1,7 @@
 <?php
 $controllers = array(
-'home'=>['home','error'],
-'fieldhospital'=>['index','an'],
+'home'=>['home','error','search'],
+'fieldhospital'=>['index','an','search'],
 'page2'=>['index'],
 'page3'=>['index']);
 

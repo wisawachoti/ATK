@@ -9,6 +9,13 @@ class HomeController{
     }
 
 
+    public function search()
+    {
+        $key = $_GET['key'];
+        $fhlList = fh_Model::search($key);
+        require_once('views/home/home.php');
+    }
+
 
 
     public function error(){

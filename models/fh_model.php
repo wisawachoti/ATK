@@ -39,35 +39,33 @@ class fh_Model
     //         return new offerdetailModel($detail_id,$offer_id,$product_id,$quantity,$printt,$color_name,$cp_id);
     //     }
 
-    // // =============================================================================================================================================__search
+    // =============================================================================================================================================__search
 
-    //     public static function search($key)
-    //     {
-    //         $offerdetailList=[];
-    //         require("connection_connect.php");
+        public static function search($key)
+        {
 
-    //         $sql = "SELECT offerdetail_id,offer_id,of.product_id,quantity,of.print as pt,cp.color_name , cp.cp_id as c FROM offerdetail as of INNER JOIN Color_Product as cp ON cp.cp_id = of.cp_id
+            $fhList = [];
+            require("connection_connect.php");
 
-    //          WHERE (of.offer_id like '%$key%' or of.product_id like '%$key%' or of.quantity like '%$key%' or of.print like '%$key%' or cp.color_name like '%$key%') ";
-    //         $result = $conn->query($sql);
-    //         while($my_row = $result->fetch_assoc())
-    //         {
+            $sql = "SELECT `field_hospital_id`,`fh_name`,`green`,`yellow`,`red` FROM Field_hospital 
+             WHERE (field_hospital_id like '%$key%' or fh_name like '%$key%') ";
+            $result = $conn->query($sql);
+            while($my_row = $result->fetch_assoc())
+            {
+                $field_hospital_id = $my_row['field_hospital_id'];
+                $fh_name = $my_row['fh_name'];
+                $green = $my_row['green'];
+                $yellow = $my_row['yellow'];
+                $red = $my_row['red'];
+    
 
-    //             $detail_id= $my_row[offerdetail_id];
-    //             $offer_id= $my_row[offer_id];
-    //             $quantity = $my_row[quantity];
-    //             $product_id= $my_row[product_id];
-    //             $printt = $my_row[pt];
-    //             $color_name= $my_row[color_name];
-    //             $cp_id= $my_row[c];
+                $fhList[] = new  fh_Model($field_hospital_id, $fh_name, $green, $yellow, $red);
 
-    //             $offerdetailList[] = new offerdetailModel($detail_id,$offer_id,$product_id,$quantity,$printt,$color_name,$cp_id);
+            }
+            require("connection_close.php");
 
-    //         }
-    //         require("connection_close.php");
-
-    //         return $offerdetailList;
-    //     }
+            return $fhList;
+        }
 
     // // =============================================================================================================================================__update
 

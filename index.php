@@ -34,8 +34,8 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
 </head>
 
 <body>
-<!-- <?php echo "---------------------------------------------------------------------------"."controller = ".$controller.",action = ".$action; ?> -->
-  
+<!-- <?php echo "---------------------------------------------------------------------------"."controller = ".$controller.",action = ".$action; ?>
+   -->
 
 
     <!-- <br>

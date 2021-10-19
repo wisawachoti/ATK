@@ -94,7 +94,11 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-search"></i></span>
                 </div>
-                <input class="form-control" placeholder="Search" type="text">
+                   
+                    
+                <input class="form-control" placeholder="Search" type="text" name="key">
+                <input type="hidden" name="controller" value="fieldhospital"/>
+                <input type="hidden" name="action" value="search"/>
               </div>
             </div>
 
@@ -126,13 +130,11 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">จำนวนโรงพยาบาลสนาม</h5>
+                      <h5 class="card-title text-uppercase text-muted mb-0">โรงพยาบาลสนาม</h5>
                       <span class="h2 font-weight-bold mb-0">2</span>
                     </div>
                     <div class="col-auto">
-                      <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
-                    
-                      </div>
+                    <img src="assets/img/brand/hospital-building-2.png" class="navbar-brand-img" alt="...">
                     </div>
                   </div>
                 </div>
@@ -150,9 +152,7 @@
                       <span class="h2 font-weight-bold mb-0">2,356</span>
                     </div>
                     <div class="col-auto">
-                      <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
-                    
-                      </div>
+                    <img src="assets/img/brand/bed-2.png" class="navbar-brand-img" alt="...">
                     </div>
                   </div>
                 </div>
@@ -170,9 +170,7 @@
                       <span class="h2 font-weight-bold mb-0">924</span>
                     </div>
                     <div class="col-auto">
-                      <div class="icon icon-shape bg-gradient-yellow text-white rounded-circle shadow">
-                      
-                      </div>
+                      <img src="assets/img/brand/bed-3.png" class="navbar-brand-img" alt="..."> 
                     </div>
                   </div>
                 </div>
@@ -188,9 +186,7 @@
                       <span class="h2 font-weight-bold mb-0">500</span>
                     </div>
                     <div class="col-auto">
-                      <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
-                        
-                      </div>
+                      <img src="assets/img/brand/bed-4.png" class="navbar-brand-img" alt="...">
                     </div>
                   </div>
                 </div>
@@ -222,6 +218,7 @@
               <table class="table align-items-center table-flush">
                 <thead class="thead-light">
                   <tr>
+                    <th scope="col">ID</th>
                     <th scope="col">Name</th>
                     <th scope="col">green</th>
                     <th scope="col">yellow</th>
@@ -230,7 +227,8 @@
                 </thead>
                 <tbody>
                 <?php foreach ($fhlList as $data) {
-                  echo "<tr> 
+                  echo "<tr>
+                <td>$data->field_hospital_id</td>  
                 <td>$data->fh_name</td> 
                 <td>$data->green</td> 
                 <td>$data->yellow </td> 
