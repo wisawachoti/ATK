@@ -6,6 +6,9 @@
         public $DLOGillness;
         public $HIid;
         public $PPname;
+        public $CheckAll;
+        public $CheckGreen;
+        public $CheckYellow;
 
         public function __construct ($DLOGid, $DLOGdate, $DLOGcolour, $DLOGillness, $HIid, $PPname) {
             $this->DLOGid = $DLOGid;
@@ -98,6 +101,35 @@
             $result = $conn -> query($sql);
             require("connection_close.php");
             return "Delete SUCCESS!";
+        }
+        public static function CheckAll() {
+            require("connection_connect.php");
+            $sql = "SELECT COUNT(dlog_id) as Counta FROM DailyLog";
+            $result = $conn->query($sql);
+            $my_row = $result->fetch_assoc();
+            $CheckAll = $my_row['Counta'];
+            require("connection_close.php");
+            return $CheckAll;
+        }
+        public static function CheckGreen() {
+            require("connection_connect.php");
+            $sql = "SELECT COUNT(dlog_colour) as CountG FROM DailyLog
+            WHERE dlog_colour LIKE '%Green'";
+            $result = $conn->query($sql);
+            $my_row = $result->fetch_assoc();
+            $CheckGreen = $my_row['CountG'];
+            require("connection_close.php");
+            return $CheckGreen;
+        }
+        public static function CheckYellow() {
+            require("connection_connect.php");
+            $sql = "SELECT COUNT(dlog_colour) as CountY FROM DailyLog
+            WHERE dlog_colour LIKE '%Yellow'";
+            $result = $conn->query($sql);
+            $my_row = $result->fetch_assoc();
+            $CheckYellow = $my_row['CountY'];
+            require("connection_close.php");
+            return $CheckYellow;
         }
     }
     ?>

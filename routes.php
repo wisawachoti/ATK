@@ -11,15 +11,18 @@ function call($controller,$action){
         case"pages": $controller = new PagesController();
                      break;
         case"Object":   require_once("models/OBJ.php");
+                        require_once("models/AutoID.php");
                         $controller = new ObjectController();
                         break;
         case"DailyLog": require_once("models/DailyLog.php");
                         require_once("models/HomeISO.php");
+                        require_once("models/AutoID.php");
                         $controller = new DailyLogController();
                         break;
         case"NesObject": require_once("models/NesObject.php");
                          require_once("models/OBJ.php");
                          require_once("models/HomeISO.php");
+                         require_once("models/AutoID.php");
                          $controller = new NesObjectController();
                          break;
     }

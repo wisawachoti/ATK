@@ -2,12 +2,16 @@
 class NesObjectController{
     public function index(){
         $nesobjectlist = NesObject::getAll();
+        $CheckAll = NesObject::CheckAll();
+        $CheckQuantity = NesObject::CheckQuantity();
+        $CheckHomeIsolation = NesObject::CheckHomeIsolation();
         require_once('views/NesObject/indexNesObject.php');
     }
     public function newNesObject(){
         $nesobjectlist = NesObject::getAll();
         $objectlist = OBJ::getAll();
         $homeisolationlist = HomeISO::getAll();
+        $ID = aiModel::getid('NecessaryObject', 'nes_id');
         require_once('views/NesObject/newNesObject.php');
     }
     public function addNesObject(){

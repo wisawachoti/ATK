@@ -6,6 +6,9 @@
         public $NESquantity;
         public $HIid;
         public $PPname;
+        public $CheckAll;
+        public $CheckHomeIsolation;
+        public $CheckQuantity;
 
         public function __construct ($NESid, $OBJid, $OBJname, $NESquantity, $HIid, $PPname) {
             $this->NESid = $NESid;
@@ -98,6 +101,33 @@
             $result = $conn -> query($sql);
             require("connection_close.php");
             return "Delete SUCCESS!";
+        }
+        public static function CheckAll() {
+            require("connection_connect.php");
+            $sql = "SELECT COUNT(nes_id) as Counta FROM NecessaryObject";
+            $result = $conn->query($sql);
+            $my_row = $result->fetch_assoc();
+            $CheckAll = $my_row['Counta'];
+            require("connection_close.php");
+            return $CheckAll;
+        }
+        public static function CheckQuantity() {
+            require("connection_connect.php");
+            $sql = "SELECT SUM(nes_quantity) as CountG FROM NecessaryObject";
+            $result = $conn->query($sql);
+            $my_row = $result->fetch_assoc();
+            $CheckQuantity = $my_row['CountG'];
+            require("connection_close.php");
+            return $CheckQuantity;
+        }
+        public static function CheckHomeIsolation() {
+            require("connection_connect.php");
+            $sql = "SELECT COUNT(hi_id) as CountHI FROM home_isolation";
+            $result = $conn->query($sql);
+            $my_row = $result->fetch_assoc();
+            $CheckHomeIsolation = $my_row['CountHI'];
+            require("connection_close.php");
+            return $CheckHomeIsolation;
         }
     }
     ?>

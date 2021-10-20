@@ -2,10 +2,14 @@
 class ObjectController{
     public function index(){
         $objectlist = OBJ::getAll();
+        $CheckAll = OBJ::CheckAll();
+        $CheckFood = OBJ::CheckFood();
+        $CheckHealth = OBJ::CheckHealth();
         require_once('views/OBJ/indexObject.php');
     }
     public function newObject(){
         $objectlist = OBJ::getAll();
+        $ID = aiModel::getid('Object', 'object_id');
         require_once('views/OBJ/newObject.php');
     }
     public function addObject(){
@@ -19,6 +23,9 @@ class ObjectController{
     public function search(){
         $key = $_GET['key'];
         $objectlist = OBJ::search($key);
+        $CheckAll = OBJ::CheckAll();
+        $CheckFood = OBJ::CheckFood();
+        $CheckHealth = OBJ::CheckHealth();
         require_once('views/OBJ/indexObject.php');
     }
     public function updateForm(){

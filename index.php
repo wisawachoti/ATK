@@ -8,85 +8,96 @@ else{
     $controller = 'pages';
     $action = 'home';
 } ?>
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        background-image: linear-gradient(to top right, rgb(48, 61, 232), rgb(207, 37, 204));
-        text-align: center;
-        color: white;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    header {
-        background-color: rgb(34, 34, 54);
-    }
 
-    a:link {
-        color: black;
-        background-color: transparent;
-        text-decoration: none;
-    }
-    a:visited {
-        color: dodgerblue;
-        background-color: transparent;
-        text-decoration: none;
-    }
-    a:hover {
-        color: plum;
-        background-color: transparent;
-        text-decoration: underline;
-    }
-    a:active {
-        color: darksalmon;
-        background-color: transparent;
-        text-decoration: underline;
-    }
-
-    .main-nav {
-        height: 80px;
-    }
-    .navlinks {
-        list-style: none;
-        text-align: center;
-        line-height: 80px;
-        margin: 0;
-        padding: 0;
-    }
-    .navlinks li {
-        display: inline-block;
-        margin: 0px 10px;
-    }
-    .navlinks li a {
-        color: white;
-        text-decoration: none;
-        font-size: 17px;
-        text-transform: uppercase;
-    }
-    .navlinks li a:hover {
-        color: salmon;
-        transition: all 0.3s ease 0s;
-    }
-    .navlinks li a:active {
-        color: palevioletred;
-        transition: all 0.2s ease 0s;
-    }
-    
-
-</style>
+<!DOCTYPE html>
 <html>
-    <head></head>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ATK Project</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
     <body>
-        <header>
-            <nav class="main-nav">
-                <ul class="navlinks">
-                    <li><a href="?controller=pages&action=home"> Home </a><li>
-                    <li><a href="?controller=Object&action=index"> Object </a><li>
-                    <li><a href="?controller=DailyLog&action=index"> DailyLog </a><li>
-                    <li><a href="?controller=NesObject&action=index"> NecessaryObject </a><li>
-                </ul><br>
-                <?php echo "Status = ".$controller."  |  ".$action;?>
-            </nav>
-        </header>
-        <br><br><?php require_once("routes.php");?></br>
-</body>
+        <div class="container">
+            <div class="navigation">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="ATKicon"><ion-icon name="shield-half-outline"></ion-icon></span>
+                            <span class="ATK">ATK Project</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="?controller=pages&action=home">
+                            <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                            <span class="title">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="?controller=Object&action=index">
+                            <span class="icon"><ion-icon name="gift-outline"></ion-icon></span>
+                            <span class="title">Object</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="?controller=DailyLog&action=index">
+                            <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
+                            <span class="title">DailyLog</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="?controller=NesObject&action=index">
+                            <span class="icon"><ion-icon name="checkmark-circle-outline"></ion-icon></span>
+                            <span class="title">NecessaryObject</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+            
+            <div class="main">
+                <div class="topbar">
+                    <div class="toggle">
+                        <ion-icon name="reorder-four-outline"></ion-icon>
+                    </div>
+                    <div class="search">
+                        <label>
+                            <form method="get" action="">
+                            <input type="text" name="key" placeholder="Search here">
+                            <input type=hidden name=controller value=Object>
+                            <button class="button button1" type="submit" name="action" value="search">
+                                <ion-icon name="search-sharp"></ion-icon></button>
+                            </form>
+                        </label>
+                    </div>
+                </div>
+                <br><br><?php require_once("routes.php");?></br>
+            </div>
+
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        
+        <script>
+            let toggle = document.querySelector('.toggle');
+            let navigation = document.querySelector('.navigation');
+            let main = document.querySelector('.main');
+
+            toggle.onclick = function(){
+                navigation.classList.toggle('active');
+                main.classList.toggle('active');
+            }
+
+            let list = document.querySelectorAll('.navigation li');
+            function activeLink(){
+                list.forEach((item) => 
+                item.classList.remove('hovered'));
+                this.classList.add('hovered');
+            }
+            list.forEach((item) =>
+            item.addEventListener('mouseover',activeLink));
+        </script>
+        
+        
+    </body>
 </html>

@@ -4,6 +4,9 @@
         public $OBJname;
         public $OBJtype;
         public $OBJdesc;
+        public $CheckAll;
+        public $CheckFood;
+        public $CheckHealth;
 
         public function __construct ($OBJid, $OBJname, $OBJtype, $OBJdesc) {
             $this->OBJid = $OBJid;
@@ -84,6 +87,35 @@
             $result = $conn -> query($sql);
             require("connection_close.php");
             return "Delete SUCCESS!";
+        }
+        public static function CheckAll() {
+            require("connection_connect.php");
+            $sql = "SELECT COUNT(object_id) as Counta FROM Object";
+            $result = $conn->query($sql);
+            $my_row = $result->fetch_assoc();
+            $CheckAll = $my_row['Counta'];
+            require("connection_close.php");
+            return $CheckAll;
+        }
+        public static function CheckFood() {
+            require("connection_connect.php");
+            $sql = "SELECT COUNT(object_type) as CountF FROM Object
+            WHERE object_type LIKE '%อาหาร%'";
+            $result = $conn->query($sql);
+            $my_row = $result->fetch_assoc();
+            $CheckFood = $my_row['CountF'];
+            require("connection_close.php");
+            return $CheckFood;
+        }
+        public static function CheckHealth() {
+            require("connection_connect.php");
+            $sql = "SELECT COUNT(object_type) as CountH FROM Object
+            WHERE object_type LIKE '%สุขภาพ%'";
+            $result = $conn->query($sql);
+            $my_row = $result->fetch_assoc();
+            $CheckHealth = $my_row['CountH'];
+            require("connection_close.php");
+            return $CheckHealth;
         }
     }
     ?>

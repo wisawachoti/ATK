@@ -2,11 +2,15 @@
 class DailyLogController{
     public function index(){
         $dailyloglist = DailyLog::getAll();
+        $CheckAll = DailyLog::CheckAll();
+        $CheckGreen = DailyLog::CheckGreen();
+        $CheckYellow = DailyLog::CheckYellow();
         require_once('views/DailyLog/indexDailyLog.php');
     }
     public function newDailyLog(){
         $dailyloglist = DailyLog::getAll();
         $homeisolationlist = HomeISO::getAll();
+        $ID = aiModel::getid('DailyLog', 'dlog_id');
         require_once('views/DailyLog/newDailyLog.php');
     }
     public function addDailyLog(){
