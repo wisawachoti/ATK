@@ -93,6 +93,23 @@ h1{
             box-shadow: 0 10px 36px rgba(0, 0, 0, .15);
         }
     }
+    &__button2{
+        display: block;
+        margin-right: auto;
+        padding: .75rem 2rem;
+        outline: none;
+        border: none;
+        background-color: var(--first-color);
+        color: #fff;
+        font-size: var(--normal-font-size);
+        border-radius: .5rem;
+        cursor: pointer;
+        transition: .3s;
+
+        &:hover{
+            box-shadow: 0 10px 36px rgba(0, 0, 0, .15);
+        }
+    }
 }
 
 /*Input focus move up label*/

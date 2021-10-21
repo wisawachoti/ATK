@@ -149,11 +149,11 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">เตียงที่วาง(สีเขียว)</h5>
+                      <h5 class="card-title text-uppercase text-muted mb-0">ผู้ติดเชื้อ(สีเขียว)</h5>
                       <span class="h2 font-weight-bold mb-0">2,356</span>
                     </div>
                     <div class="col-auto">
-                      <img src="assets/img/brand/bed-2.png" class="navbar-brand-img" alt="...">
+                      <img src="assets/img/brand/sick-3.png" class="navbar-brand-img" alt="...">
                     </div>
                   </div>
                 </div>
@@ -167,11 +167,11 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">เตียงที่วาง(สีเหลือง)</h5>
+                      <h5 class="card-title text-uppercase text-muted mb-0">ผู้ติดเชื้อ(สีเหลือง)</h5>
                       <span class="h2 font-weight-bold mb-0">924</span>
                     </div>
                     <div class="col-auto">
-                      <img src="assets/img/brand/bed-3.png" class="navbar-brand-img" alt="...">
+                      <img src="assets/img/brand/sick-4.png" class="navbar-brand-img" alt="...">
                     </div>
                   </div>
                 </div>
@@ -183,11 +183,11 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">เตียงที่วาง(สีแดง)</h5>
+                      <h5 class="card-title text-uppercase text-muted mb-0">ผู้ติดเชื้อ(สีแดง)</h5>
                       <span class="h2 font-weight-bold mb-0">500</span>
                     </div>
                     <div class="col-auto">
-                      <img src="assets/img/brand/bed-4.png" class="navbar-brand-img" alt="...">
+                      <img src="assets/img/brand/sick-5.png" class="navbar-brand-img" alt="...">
                     </div>
                   </div>
                 </div>

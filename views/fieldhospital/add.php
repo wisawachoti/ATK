@@ -11,17 +11,21 @@
     <link rel="icon" href="assets/img/brand/favicon.png" type="image/png">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
-    <!-- Icons -->
-    <link rel="stylesheet" href="assets/vendor/nucleo/css/nucleo.css" type="text/css">
-    <link rel="stylesheet" href="assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
     <!-- Page plugins -->
-    <!-- Argon CSS -->
-    <link rel="stylesheet" href="assets/css/argon.css?v=1.2.0" type="text/css">
-
     <!--===== CSS =====-->
-    <link rel="stylesheet" href="assets2/css/styles.css">
+    <link rel="stylesheet" href="assets_add/css/styles.css">
 
-
+    <style>
+        h1 {
+            display: block;
+            font-size: 2em;
+            margin-top: 0.67em;
+            margin-bottom: 0.67em;
+            margin-left: 0;
+            margin-right: 0;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
@@ -41,9 +45,11 @@
 
         <div class="l-form">
             <form action="" class="form">
-            <span><img src="assets/img/brand/hospital-building.png" class="navbar-brand-img" alt="..."> </span>
-                 <h1 class="form__title">Field Hospital</h1>
-                 
+                <div style="float:left">
+                    <img src="assets/img/brand/hospital-building-2.png" class="navbar-brand-img" alt="...">
+                </div>
+
+                <h1 class="form__title" style="text-align:center">Field Hospital</h1>
 
                 <div class="form__div">
                     <input type="text" class="form__input" placeholder=" " name="id" value="<?php echo $id; ?>">
@@ -80,10 +86,78 @@
                     </select>
                     <label for="" class="form__label">Agency</label>
                 </div> -->
-                <input type="hidden" name="controller" value="fieldhospital" />
-                <input type="submit" class="form__button"  name="action" value="BACK" >
+                <!-- <div class="container">
 
-                <span><input type="submit" class="form__button" value="NEW"></span>
+                    <div class="select-box">
+                        <div class="options-container">
+                            <div class="option">
+                                <input type="radio" class="radio" id="automobiles" name="category" />
+                                <label for="automobiles">Automobiles</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" id="film" name="category" />
+                                <label for="film">Film & Animation</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" id="science" name="category" />
+                                <label for="science">Science & Technology</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" id="art" name="category" />
+                                <label for="art">Art</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" id="music" name="category" />
+                                <label for="music">Music</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" id="travel" name="category" />
+                                <label for="travel">Travel & Events</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" id="sports" name="category" />
+                                <label for="sports">Sports</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" id="news" name="category" />
+                                <label for="news">News & Politics</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" id="tutorials" name="category" />
+                                <label for="tutorials">Tutorials</label>
+                            </div>
+                        </div>
+
+                        <div class="selected">
+                            Select Video Category
+                        </div>
+                    </div>
+                </div>
+
+                <script src="main.js"></script> -->
+
+
+
+                <input type="hidden" name="controller" value="fieldhospital" />
+                <div style="float:left">
+                    <input type="submit" class="form__button2" name="action" value="BACK">
+                </div>
+                <input type="submit" class="form__button" name="action" value="NEW">
+
+
+
+
+
+
+
             </form>
         </div>
 
@@ -142,3 +216,64 @@
 </div>
 
 </form> -->
+
+
+
+
+<!-- <div class="select-box">
+        <div class="options-container">
+          <div class="option">
+            <input
+              type="radio"
+              class="radio"
+              id="automobiles"
+              name="category"
+            />
+            <label for="automobiles">Automobiles</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="film" name="category" />
+            <label for="film">Film & Animation</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="science" name="category" />
+            <label for="science">Science & Technology</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="art" name="category" />
+            <label for="art">Art</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="music" name="category" />
+            <label for="music">Music</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="travel" name="category" />
+            <label for="travel">Travel & Events</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="sports" name="category" />
+            <label for="sports">Sports</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="news" name="category" />
+            <label for="news">News & Politics</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="tutorials" name="category" />
+            <label for="tutorials">Tutorials</label>
+          </div>
+        </div>
+
+        <div class="selected">
+          Select Video Category
+        </div>
+</div> -->
