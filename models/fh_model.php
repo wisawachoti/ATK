@@ -21,24 +21,25 @@ class fh_Model
 
     // =============================================================================================================================================__get
 
-    //     public static function get($detail_id)
-    //     {
-    //         require("connection_connect.php");
-    //         $sql = "SELECT offerdetail_id,offer_id,of.product_id,quantity,of.print as pt,cp.color_name , cp.cp_id as c FROM offerdetail as of INNER JOIN Color_Product as cp ON cp.cp_id = of.cp_id
-    //                   WHERE offerdetail_id=$detail_id ";
-    //         $result = $conn->query($sql);
-    //         $my_row = $result->fetch_assoc();
+        public static function get($key)
+        {
+            require("connection_connect.php");
+            $sql = "SELECT `field_hospital_id`,`fh_name`,`green`,`yellow`,`red`,a.agency_name as agency FROM Field_hospital as f INNER JOIN agency as a ON f.agency_id = a.agency_id 
+                    WHERE `field_hospital_id`='$key' ";
+            $result = $conn->query($sql);
+            $my_row = $result->fetch_assoc();
 
-    //             $offer_id= $my_row[offer_id];
-    //             $quantity = $my_row[quantity];
-    //             $product_id= $my_row[product_id];
-    //             $printt = $my_row[pt];
-    //             $color_name= $my_row[color_name];
-    //             $cp_id= $my_row[c];
-    //         require("connection_close.php");
+            $field_hospital_id = $my_row['field_hospital_id'];
+            $fh_name = $my_row['fh_name'];
+            $green = $my_row['green'];
+            $yellow = $my_row['yellow'];
+            $red = $my_row['red'];
+            $agency = $my_row['agency'];
 
-    //         return new offerdetailModel($detail_id,$offer_id,$product_id,$quantity,$printt,$color_name,$cp_id);
-    //     }
+            require("connection_close.php");
+
+            return new fh_Model($field_hospital_id, $fh_name, $green, $yellow, $red,$agency);
+        }
 
     // =============================================================================================================================================__search
 
@@ -71,23 +72,17 @@ class fh_Model
 
     // // =============================================================================================================================================__update
 
-    //     public static function update($detail_id,$offer_id,$product_id,$quantity,$printt,$cp_id,$detailid)
-    //     {
-    //         require("connection_connect.php");
-    //         $sql = "UPDATE offerdetail
-    //         SET `offerdetail_id`=$detail_id,`offer_id`='$offer_id',`product_id`='$product_id',`print`=$printt,`quantity`=$quantity
-    //         WHERE `offerdetail_id`='$detailid'";
-    //         $result = $conn->query($sql);
+        public static function update($key,$field_hospital_id, $fh_name, $green, $yellow, $red,$agency)
+        {
+            require("connection_connect.php");
+            $sql = "UPDATE Field_hospital 
+            SET `field_hospital_id`='$field_hospital_id',`fh_name`='$fh_name',`green`=$green,`yellow`=$yellow,`red`= $red,`agency_id`='$agency'
+            WHERE `field_hospital_id`='$key'";
+            $result = $conn->query($sql);
+            require("connection_close.php");
+            return "update success $result row";
 
-    //         $sql2 = "UPDATE `offerdetail`
-    //         SET `cp_id`=$cp_id
-    //         WHERE `offerdetail_id`='$detailid'";
-    //         $result = $conn->query($sql2);
-
-    //         require("connection_close.php");
-    //         return "update success $result row";
-
-    //     }
+        }
 
     // // =============================================================================================================================================__delete
 
@@ -100,19 +95,6 @@ class fh_Model
     //         return "delete success $result row";
     //     }
 
-    // // =============================================================================================================================================__Add
-
-    //     public static function Add($offer_id,$product_id,$quantity,$print,$cp_id)
-    //     {
-    //         require("connection_connect.php");
-    //         $sql = "INSERT INTO `offerdetail`(`offer_id`,`product_id`,`quantity`,`print`,`cp_id` ) 
-    //         VALUES ('$offer_id','$product_id',$quantity,$print,$cp_id)";
-    //         $result = $conn->query($sql);
-    //         require("connection_close.php");
-    //         return ;
-    //     }
-
-    // // =============================================================================================================================================__getall
 
     public static function getAll()
     {

@@ -45,36 +45,34 @@
 
         <div class="l-form">
             <form action="" class="form">
-
-           
-            
                 <div style="float:left">
                     <img src="assets/img/brand/hospital-building-2.png" class="navbar-brand-img" alt="...">
                 </div>
 
-                <h1 class="form__title" style="text-align:center">New Hospital</h1>
+                <h1 class="form__title" style="text-align:center">Update Hospital</h1>
+
                 <div class="form__div">
-                    <input type="text" class="form__input" placeholder=" " name="id" value="<?php echo $id; ?>">
+                    <input type="text" class="form__input" placeholder=" " name="id" value="<?php echo $fhlList->field_hospital_id; ?>">
                     <label for="" class="form__label">ID</label>
                 </div>
 
                 <div class="form__div">
-                    <input type="text" class="form__input" placeholder=" " name="fh_name" >
+                    <input type="text" class="form__input" placeholder=" " name="fh_name" value="<?php echo $fhlList->fh_name ; ?>">
                     <label for="" class="form__label">Name</label>
                 </div>
 
                 <div class="form__div">
-                    <input type="number" class="form__input" placeholder=" " name="green">
+                    <input type="number" class="form__input" placeholder=" " name="green" value="<?php echo $fhlList->green ; ?>">
                     <label for="" class="form__label">Green</label>
                 </div>
 
                 <div class="form__div">
-                    <input type="number" class="form__input" placeholder=" " name="yellow">
+                    <input type="number" class="form__input" placeholder=" " name="yellow" value="<?php echo $fhlList->yellow ; ?>">
                     <label for="" class="form__label">Yellow</label>
                 </div>
 
                 <div class="form__div">
-                    <input type="number" class="form__input" placeholder=" " name="red">
+                    <input type="number" class="form__input" placeholder=" " name="red" value="<?php echo $fhlList->red; ?>">
                     <label for="" class="form__label">Red</label>
                 </div>
 
@@ -83,6 +81,10 @@
                     <select name="agency">
                         <?php foreach ($agList as $data) {
                             echo "<option value=$data->agency_id";
+                            if($data->agency_name==$fhlList->agency)
+                            {
+                                echo " selected='selected'";
+                            }
                             echo "> $data->agency_name</option>";
                         } ?>
                     </select>
@@ -94,15 +96,14 @@
 
 
                 <input type="hidden" name="controller" value="fieldhospital" />
+                <input type="hidden" name="key" value="<?php echo $fhlList->field_hospital_id; ?>" />
                 <div style="float:left">
                     <input type="submit" class="form__button2" name="action" value="BACK">
                 </div>
 
 
-                <input type="submit" class="form__button" name="action" value="NEW">
 
-
-
+                <input type="submit" class="form__button" name="action" value="Update">
 
 
 
