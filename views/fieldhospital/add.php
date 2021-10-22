@@ -53,96 +53,41 @@
 
                 <div class="form__div">
                     <input type="text" class="form__input" placeholder=" " name="id" value="<?php echo $id; ?>">
-
                     <label for="" class="form__label">ID</label>
                 </div>
 
                 <div class="form__div">
-                    <input type="text" class="form__input" placeholder=" ">
+                    <input type="text" class="form__input" placeholder=" " name="fh_name" >
                     <label for="" class="form__label">Name</label>
                 </div>
 
                 <div class="form__div">
-                    <input type="number" class="form__input" placeholder=" ">
+                    <input type="number" class="form__input" placeholder=" " name="green">
                     <label for="" class="form__label">Green</label>
                 </div>
 
                 <div class="form__div">
-                    <input type="number" class="form__input" placeholder=" ">
+                    <input type="number" class="form__input" placeholder=" " name="yellow">
                     <label for="" class="form__label">Yellow</label>
                 </div>
 
                 <div class="form__div">
-                    <input type="number" class="form__input" placeholder=" ">
+                    <input type="number" class="form__input" placeholder=" " name="red">
                     <label for="" class="form__label">Red</label>
                 </div>
 
-                <!-- <div class="form__div">
+                <div class="form__div">
+                <label for="" class="">Agency</label>
                     <select name="agency">
                         <?php foreach ($agList as $data) {
                             echo "<option value=$data->agency_id";
-                            echo "> $data->agency_id</option>";
+                            echo "> $data->agency_name</option>";
                         } ?>
                     </select>
-                    <label for="" class="form__label">Agency</label>
-                </div> -->
-                <!-- <div class="container">
-
-                    <div class="select-box">
-                        <div class="options-container">
-                            <div class="option">
-                                <input type="radio" class="radio" id="automobiles" name="category" />
-                                <label for="automobiles">Automobiles</label>
-                            </div>
-
-                            <div class="option">
-                                <input type="radio" class="radio" id="film" name="category" />
-                                <label for="film">Film & Animation</label>
-                            </div>
-
-                            <div class="option">
-                                <input type="radio" class="radio" id="science" name="category" />
-                                <label for="science">Science & Technology</label>
-                            </div>
-
-                            <div class="option">
-                                <input type="radio" class="radio" id="art" name="category" />
-                                <label for="art">Art</label>
-                            </div>
-
-                            <div class="option">
-                                <input type="radio" class="radio" id="music" name="category" />
-                                <label for="music">Music</label>
-                            </div>
-
-                            <div class="option">
-                                <input type="radio" class="radio" id="travel" name="category" />
-                                <label for="travel">Travel & Events</label>
-                            </div>
-
-                            <div class="option">
-                                <input type="radio" class="radio" id="sports" name="category" />
-                                <label for="sports">Sports</label>
-                            </div>
-
-                            <div class="option">
-                                <input type="radio" class="radio" id="news" name="category" />
-                                <label for="news">News & Politics</label>
-                            </div>
-
-                            <div class="option">
-                                <input type="radio" class="radio" id="tutorials" name="category" />
-                                <label for="tutorials">Tutorials</label>
-                            </div>
-                        </div>
-
-                        <div class="selected">
-                            Select Video Category
-                        </div>
-                    </div>
+                    
                 </div>
 
-                <script src="main.js"></script> -->
+
 
 
 
@@ -150,6 +95,8 @@
                 <div style="float:left">
                     <input type="submit" class="form__button2" name="action" value="BACK">
                 </div>
+
+
                 <input type="submit" class="form__button" name="action" value="NEW">
 
 
@@ -192,88 +139,3 @@
 
 </html>
 
-
-<!-- <form method="get" action="">
-
-
-<div style="text-align: center">
-
-    <label>Name : <input type="text" name="name" /> </label><br>
-    <label>Green : <input type="number" name="green" /> </label><br>
-    <label>Yellow : <input type="number" name="yellow" /> </label><br>
-    <label>Red : <input type="number" name="red" /> </label><br>
-
-    <label>agency : <select name="agency">
-            <?php foreach ($agList as $data) {
-                echo "<option value=$data->agency_id";
-                echo "> $data->agency_id</option>";
-            } ?>
-        </select></label><br>
-
-    <input type="hidden" name="controller" value="fieldhospital" />
-    <button type="submit" name="action" value="index"> Back </button>
-
-</div>
-
-</form> -->
-
-
-
-
-<!-- <div class="select-box">
-        <div class="options-container">
-          <div class="option">
-            <input
-              type="radio"
-              class="radio"
-              id="automobiles"
-              name="category"
-            />
-            <label for="automobiles">Automobiles</label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="film" name="category" />
-            <label for="film">Film & Animation</label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="science" name="category" />
-            <label for="science">Science & Technology</label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="art" name="category" />
-            <label for="art">Art</label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="music" name="category" />
-            <label for="music">Music</label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="travel" name="category" />
-            <label for="travel">Travel & Events</label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="sports" name="category" />
-            <label for="sports">Sports</label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="news" name="category" />
-            <label for="news">News & Politics</label>
-          </div>
-
-          <div class="option">
-            <input type="radio" class="radio" id="tutorials" name="category" />
-            <label for="tutorials">Tutorials</label>
-          </div>
-        </div>
-
-        <div class="selected">
-          Select Video Category
-        </div>
-</div> -->

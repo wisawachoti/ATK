@@ -138,11 +138,11 @@ class fh_Model
         return $fhList;
     }
 
-    public static function Add($field_hospital_id, $fh_name, $green, $yellow, $red)
+    public static function Add($field_hospital_id, $fh_name, $green, $yellow, $red,$agency_id)
     {
         require("connection_connect.php");
-        $sql = "INSERT INTO `Field_hospital`(`field_hospital_id`, `fh_name`, `green`, `yellow`, `red`) 
-        VALUES($field_hospital_id, $fh_name, $green, $yellow, $red)";
+        $sql = "INSERT INTO `Field_hospital`(`field_hospital_id`, `fh_name`, `green`, `yellow`, `red`,`agency_id`) 
+        VALUES('$field_hospital_id', '$fh_name', $green, $yellow, $red,'$agency_id')";
         $result = $conn->query($sql);
         require("connection_close.php");
         return ;

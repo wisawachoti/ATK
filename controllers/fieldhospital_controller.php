@@ -14,6 +14,18 @@ class fhController{
         
     }
 
+    public function NEW(){
+        $field_hospital_id = $_GET['id'];
+        $fh_name = $_GET['fh_name'];
+        $green = $_GET['green'];
+        $yellow = $_GET['yellow'];
+        $red = $_GET['red'];
+        $agency_id = $_GET['agency'];
+        fh_Model::Add($field_hospital_id, $fh_name, $green, $yellow, $red,$agency_id);
+        fhController::index();
+        
+    }
+
     public function search()
     {
         $key = $_GET['key'];
