@@ -1,10 +1,10 @@
 <?php
 class StaffCheckpoint{
-    public $staffid,$staffname;
-    public function __construct($staffid,$staffname)
+    public $staffid , $staffname;
+    public function __construct($staffid , $staffname)
     {
-        $this->staffid=$staffid;
-        $this->staffname=$staffname;
+        $this->staffid = $staffid;
+        $this->staffname = $staffname;
     }
     public static function getAll()
     {
