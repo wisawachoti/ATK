@@ -7,10 +7,10 @@
         require_once("controllers/".$controller."_controller.php");
         switch($controller)
         {
-            case "pages":$controller= new PagesController();
+            case "pages" : $controller= new PagesController();
                         break;
-            case "staffcheckpoint":require_once("models/staffcheckpointModel/staffcheckpointModel.php");
-                                    $controller=new StaffCheckpointController();
+            case "staffcheckpoint" : require_once("models/staffcheckpointModel/staffcheckpointModel.php");
+                                    $controller = new StaffCheckpointController();
                                     break;
 
         }
