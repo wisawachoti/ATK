@@ -1,6 +1,6 @@
 <?php
     $controllers =array('pages'=>['home','error'],
-                        'staffcheckpoint'=>['index','newStaffCheckpoint','addStaffCheckpoint']);
+                        'staffcheckpoint'=>['index','newStaffCheckpoint','addStaffCheckpoint','searchStaffCheckpoint']);
 
     function call($controller,$action)
     {
