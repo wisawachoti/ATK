@@ -36,15 +36,14 @@ class StaffCheckpoint{
     {
         $staffcheckpointList=[];
         require("connection_connect.php");
-        $sql="SELECT * FROM StaffCheckpoint
-        WHERE(StaffCheckpoint.staff_c_id like '%$key%' or StaffCheckpoint.name like '%$key%')
+        $sql="SELECT staff_c_id , name FROM StaffCheckpoint
+        WHERE(staff_c_id like '%$key%' or name like '%$key%')
         ORDER BY StaffCheckpoint.staff_c_id";
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
             $staffid=$my_row[staff_c_id];
             $staffname=$my_row[name];
-
             $staffcheckpointList[]=new StaffCheckpoint($staffid,$staffname);
         }
         require("connection_close.php");
