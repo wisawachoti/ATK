@@ -10,7 +10,7 @@ class StaffCheckpoint{
     {
         $staffcheckpointList=[];
         require("connection_connect.php");
-        $sql="SELECT * FROM StaffCheckpoint ORDER BY StaffCheckpoint.staff_c_id";
+        $sql="SELECT * FROM StaffCheckpoint ORDER BY staff_c_id";
         $result =$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
@@ -38,7 +38,7 @@ class StaffCheckpoint{
         require("connection_connect.php");
         $sql="SELECT * FROM StaffCheckpoint
         WHERE(staff_c_id like '%$key%' or name like '%$key%')
-        ORDER BY StaffCheckpoint.staff_c_id";
+        ORDER BY staff_c_id ASC";
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
