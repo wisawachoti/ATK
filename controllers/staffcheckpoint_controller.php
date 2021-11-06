@@ -14,8 +14,8 @@ class StaffCheckpointController{
 
     public function addStaffCheckpoint()
     {
-        $staffid = $_GET['Product_ID'];
-        $staffname = $_GET['Quantity'];
+        $staffid = $_GET['staff_c_id'];
+        $staffname = $_GET['name'];
 
         StaffCheckpoint::Add($staffid,$staffname);
         StaffCheckpointController::index();
