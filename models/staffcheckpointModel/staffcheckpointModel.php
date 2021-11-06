@@ -21,5 +21,15 @@ class StaffCheckpoint{
         require("connection_close.php");
         return $staffcheckpointList;
     }
+
+        public static function Add($staffid , $staffname)
+    {
+        require("connection_connect.php");
+        $sql="insert into StaffCheckpoint(StaffCheckpoint.staff_c_id , StaffCheckpoint.name)values
+        ('$staffid','$staffname')";
+        $result =$conn->query($sql);
+        require("connection_close.php");
+        return "add success $result rows";
+    }
 }
 ?>
