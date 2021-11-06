@@ -8,7 +8,7 @@ class StaffCheckpointController{
 
     public function newStaffCheckpoint()
     {
-        $staffcheckpointList = StaffCheckpoint::getAll();
+
         require_once('views/staffcheckpoint/newStaffCheckpoint.php');
     }
 
