@@ -8,7 +8,7 @@ class StaffCheckpointController{
 
     public function newStaffCheckpoint()
     {
-
+        $staffcheckpointList = StaffCheckpoint::getAll();
         require_once('views/staffcheckpoint/newStaffCheckpoint.php');
     }
 
@@ -20,6 +20,12 @@ class StaffCheckpointController{
         StaffCheckpoint::Add($staffid,$staffname);
         StaffCheckpointController::index();
 
+    }
+
+        public function searchStaffCheckpoint(){
+        $key=$_GET['key'];
+        $staffcheckpointList=StaffCheckpoint::search($key);
+        require_once('views/staffcheckpoint/index_staffcheckpoint.php');
     }
 }
 ?>
