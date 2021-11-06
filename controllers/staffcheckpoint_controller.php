@@ -21,7 +21,6 @@ class StaffCheckpointController{
         StaffCheckpointController::index();
 
     }
-
         public function searchStaffCheckpoint(){
         $key=$_GET['key'];
         $staffcheckpointList=StaffCheckpoint::search($key);
