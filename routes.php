@@ -1,5 +1,6 @@
 <?php
-    $controllers =array('pages'=>['home','error']);
+    $controllers =array('pages'=>['home','error']
+                        ,'staffcheckpoint' =>['index']);
 
     function call($controller,$action)
     {
@@ -8,6 +9,9 @@
         {
             case "pages":$controller= new PagesController();
                         break;
+            case "staffcheckpoint":require_once("models/staffcheckpointModel/staffcheckpointModel.php");
+                                    $controller=new StaffCheckpointController();
+                                    break;
 
         }
         $controller->{$action}();
