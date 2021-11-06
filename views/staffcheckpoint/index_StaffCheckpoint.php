@@ -16,8 +16,8 @@
         <tr><td>$staffcheckpoint->staffid</td>
         <td>$staffcheckpoint->staffname</td>
 
-        <td><a href=?controller=staffcheckpoint&action=updateFormStaffCheckpoint&staff_c_id=$staffcheckpoint->staffid&name=$staffcheckpoint->staffname>update</td>
-        <td><a href=?controller=staffcheckpoint&action=deleteConfirmStaffCheckpoint&staff_c_id=$staffcheckpoint->staffid&name=$staffcheckpoint->staffname>delete</td>
+        <td><a href=?controller=staffcheckpoint&action=updateFormStaffCheckpoint&staff_c_id=$staffcheckpoint->staffid&cname=$staffcheckpoint->staffname>update</td>
+        <td><a href=?controller=staffcheckpoint&action=deleteConfirmStaffCheckpoint&staff_c_id=$staffcheckpoint->staffid&cname=$staffcheckpoint->staffname>delete</td>
         ";
     }
     echo "</table>";
