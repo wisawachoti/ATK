@@ -22,7 +22,7 @@ class StaffCheckpoint{
         return $staffcheckpointList;
     }
 
-        public static function Add($staffid , $staffname)
+    public static function Add($staffid,$staffname)
     {
         require("connection_connect.php");
         $sql="insert into StaffCheckpoint(StaffCheckpoint.staff_c_id , StaffCheckpoint.name)values
