@@ -14,9 +14,9 @@
     <head></head>
     <body>
         <?php echo "controller=".$controller," action=".$action ; ?>
-        <br>[<a href="?controller=pages&action=home">Home</a>]
-            [<a href="?controller=staffcheckpoint&action=index">StaffCheckpoint</a>]
-            [<a href="?controller=workschedule&action=index">WorkSchedule</a>]
+        <br>[<a href="?controller=pages&action=home">หน้าหลัก</a>]
+            [<a href="?controller=staffcheckpoint&action=index">ข้อมูลเจ้าหน้าที่</a>]
+            [<a href="?controller=workschedule&action=index">ตารางงาน</a>]
         <br>
         <?php require_once("routes.php"); ?>
     </body>
