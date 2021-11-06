@@ -25,7 +25,7 @@ class StaffCheckpoint{
     public static function Add($staffid,$staffname)
     {
         require("connection_connect.php");
-        $sql="insert into StaffCheckpoint(StaffCheckpoint.staff_c_id , StaffCheckpoint.name)values
+        $sql="insert into StaffCheckpoint(staff_c_id,name)values
         ('$staffid','$staffname')";
         $result =$conn->query($sql);
         require("connection_close.php");
