@@ -25,7 +25,7 @@ class StaffCheckpointController{
     {
         $key=$_GET['key'];
         $staffcheckpointList=StaffCheckpoint::search($key);
-        require_once('views/staffcheckpoint/index_staffcheckpoint.php');
+        require_once('views/staffcheckpoint/index_StaffCheckpoint.php');
     }
 }
 ?>
