@@ -3,11 +3,11 @@
 <td>ชื่อเจ้าหน้าที่</td>
 <td>Update</td>
 <td>Delete</td>
-New StaffCheckpoint [<a href="?controller=staffcheckpoint&action=newStaffCheckpoint">click</a>]<br>
+เพิ่มรายชื่อเจ้าหน้าที่ [<a href="?controller=staffcheckpoint&action=newStaffCheckpoint">click</a>]<br>
 <form method="get" action="">
     <input type="text" name="key">
     <input type="hidden" name="controller" value="staffcheckpoint"/>
-    <button type="submit" name="action" value="searchStaffCheckpoint">Search</button>
+    <button type="submit" name="action" value="searchStaffCheckpoint">ค้นหา</button>
 </form>
 <?php
     foreach($staffcheckpointList as $staffcheckpoint)
