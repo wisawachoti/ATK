@@ -6,7 +6,7 @@ class StaffCheckpointController{
         require_once('views/staffcheckpoint/index_StaffCheckpoint.php');
     }
 
-    public function newRate()
+    public function newStaffCheckpoint()
     {
         $productList = StaffCheckpoint::getAll();
         require_once('views/staffcheckpoint/newStaffCheckpoint.php');
