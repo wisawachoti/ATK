@@ -32,7 +32,7 @@ class StaffCheckpoint{
         return "add success $result rows";
     }
 
-        public static function search($key)
+    public static function search($key)
     {
         $staffcheckpointList=[];
         require("connection_connect.php");
