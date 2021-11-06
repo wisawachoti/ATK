@@ -38,8 +38,7 @@ class StaffCheckpoint{
         require("connection_connect.php");
         $sql = "SELECT staff_c_id , cname
         FROM StaffCheckpoint
-        WHERE(staff_c_id like '%$key%' or cname like '%$key%')
-        ORDER BY staff_c_id ASC";
+        WHERE(staff_c_id like '%$key%' or cname like '%$key%')";
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
