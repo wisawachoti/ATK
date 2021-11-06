@@ -36,7 +36,7 @@ class StaffCheckpoint{
     {
         $staffcheckpointList=[];
         require("connection_connect.php");
-        $sql="SELECT staff_c_id , name
+        $sql="SELECT staff_c_id , cname
         FROM StaffCheckpoint
         WHERE(staff_c_id like '%$key%' or cname like '%$key%')
         ORDER BY staff_c_id ASC";
