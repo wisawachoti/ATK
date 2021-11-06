@@ -10,7 +10,6 @@
         echo"
         <tr><td>$staffcheckpoint->staffid</td>
         <td>$staffcheckpoint->staffname</td>
-
         ";
     }
     echo "</table>";
