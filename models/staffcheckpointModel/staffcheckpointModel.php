@@ -70,7 +70,7 @@ class StaffCheckpoint{
     {
         require("connection_connect.php");
         $sql="UPDATE StaffCheckpoint SET staff_c_id='$staffid',cname='$staffname'
-        WHERE  staff_c_id='$laststaffid'AND cname='$laststaffname'";
+        WHERE  staff_c_id='$laststaffid' AND cname='$laststaffname'";
         $result=$conn->query($sql);
         require("connection_close.php");
         return "update success $result row";
