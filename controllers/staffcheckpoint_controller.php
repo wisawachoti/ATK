@@ -37,7 +37,7 @@ class StaffCheckpointController{
         require_once('views/staffcheckpoint/updateFormStaffCheckpoint.php');
     }
 
-    public function updateRate()
+    public function updateStaffCheckpoint()
     {
         $staffid=$_GET['staff_c_id'];
         $staffname=$_GET['cname'];
