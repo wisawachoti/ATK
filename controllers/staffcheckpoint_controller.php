@@ -33,6 +33,7 @@ class StaffCheckpointController{
         $staffid=$_GET['staff_c_id'];
         $staffname=$_GET['cname'];
         $staffcheckpointList=StaffCheckpoint::getAll();
+        $staffcheckpoint=StaffCheckpoint::getAll();
         $staffcheckpoint=StaffCheckpoint::get($staffid,$staffname);
         require_once('views/staffcheckpoint/updateFormStaffCheckpoint.php');
     }
