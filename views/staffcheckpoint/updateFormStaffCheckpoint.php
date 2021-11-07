@@ -6,7 +6,6 @@
         value="<?php echo $staffcheckpoint->staffname;?>"/></label><br>
 
     <input type="hidden" name="controller" value="staffcheckpoint"/>
-
     <button type="submit" name="action" value="updateStaffCheckpoint">update</button>
     <button type="submit" name="action" value="index">Back</button>
 </form>
