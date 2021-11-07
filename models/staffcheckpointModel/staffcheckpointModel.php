@@ -75,5 +75,14 @@ class StaffCheckpoint{
         require("connection_close.php");
         return "update success $result row";
     }
+
+    public static function delete($staffid,$staffname)
+    {
+        require("connection_connect.php");
+        $sql="DELETE FROM StaffCheckpoint WHERE staff_c_id='$staffid' AND cname='$staffname'";
+        $result=$conn->query($sql);
+        require("connection_close.php");
+        return "delete success $result row";
+    }
 }
 ?>
