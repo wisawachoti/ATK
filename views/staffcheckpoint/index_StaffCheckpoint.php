@@ -1,24 +1,29 @@
-<table border="1">
-<tr><td>IDเจ้าหน้าที่</td>
-<td>ชื่อเจ้าหน้าที่</td>
-<td>Update</td>
-<td>Delete</td>
-เพิ่มรายชื่อเจ้าหน้าที่ [<a href="?controller=staffcheckpoint&action=newStaffCheckpoint">click</a>]<br>
+<table border=1>
+<br>เพิ่มเจ้าหน้าที่ [<a href="?controller=staffcheckpoint&action=newStaffCheckpoint">click</a>]<br>
+<br>
 <form method="get" action="">
-    <input type="text" name="key">
-    <input type="hidden" name="controller" value="staffcheckpoint"/>
-    <button type="submit" name="action" value="searchStaffCheckpoint">ค้นหา</button>
+        <input type="text" name="key">
+        <input type="hidden" name="controller" value="staffcheckpoint">
+        <button type="submit" name="action" value="searchStaffCheckpoint">
+search</button>
 </form>
-<?php
-    foreach($staffcheckpointList as $staffcheckpoint)
-    {
-        echo"
-        <tr><td>$staffcheckpoint->staffid</td>
-        <td>$staffcheckpoint->staffname</td>
 
-        <td><a href=?controller=staffcheckpoint&action=updateFormStaffCheckpoint&staff_c_id=$staffcheckpoint->staffid&cname=$staffcheckpoint->staffname>update</td>
-        <td><a href=?controller=staffcheckpoint&action=deleteConfirmStaffCheckpoint&staff_c_id=$staffcheckpoint->staffid&cname=$staffcheckpoint->staffname>delete</td>
-        ";
-    }
-    echo "</table>";
+<tr>
+    <td>รหัสเจ้าหน้าที่</td>
+    <td>ชื่อเจ้าหน้าที่</td>
+    <td>update</td>
+    <td>delete</td>
+</tr>
+
+<?php foreach($staffcheckpointList as $staffcheckpoint)
+{
+        echo "<tr>
+        <td>$staffcheckpoint->staff_c_id</td>
+        <td>$staffcheckpoint->cname</td>
+        <td><a href=?controller=staffcheckpoint&action=updateFormStaffCheckpoint&staff_c_id=$staffcheckpoint->staff_c_id>update</a></td>
+        <td><a href=?controller=staffcheckpoint&action=deleteConfirmStaffCheckpoint&staff_c_id=$staffcheckpoint->staff_c_id>delete</a></td>
+        </tr>";
+}
+
+echo "</table>";
 ?>
