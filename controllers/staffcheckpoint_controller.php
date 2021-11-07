@@ -52,7 +52,7 @@ class StaffCheckpointController{
         $staffid=$_GET['staff_c_id'];
         $staffname=$_GET['cname'];
         $staffcheckpoint=StaffCheckpoint::get($staffid,$staffname);
-        require_once('views/rate/deleteConfirmStaffCheckpoint.php');
+        require_once('views/staffcheckpoint/deleteConfirmStaffCheckpoint.php');
     }
     public function deleteStaffCheckpoint()
     {
