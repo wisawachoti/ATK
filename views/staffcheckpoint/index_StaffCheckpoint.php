@@ -1,5 +1,5 @@
 <table border=1>
-<br>เพิ่มเจ้าหน้าที่ [<a href="?controller=staffcheckpoint&action=newStaffCheckpoint">click</a>]<br>
+เพิ่มเจ้าหน้าที่ [<a href="?controller=staffcheckpoint&action=newStaffCheckpoint">click</a>]
 <br>
 <form method="get" action="">
         <input type="text" name="key">
