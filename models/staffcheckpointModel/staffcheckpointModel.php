@@ -10,7 +10,7 @@ class StaffCheckpoint{
     {
         $staffcheckpointList=[];
         require("connection_connect.php");
-        $sql="SELECT * FROM StaffCheckpoint ORDER BY staff_c_id";
+        $sql="SELECT staff_c_id , cname FROM StaffCheckpoint";
         $result =$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
@@ -66,7 +66,7 @@ class StaffCheckpoint{
         return new StaffCheckpoint($staffid,$staffname);
     }
 
-    public static function update($staffid , $staffname , $laststaffid , $laststaffname)
+    public static function update($staffid,$staffname,$laststaffid,$laststaffname)
     {
         require("connection_connect.php");
         $sql="UPDATE StaffCheckpoint SET staff_c_id='$staffid',cname='$staffname'
