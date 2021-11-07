@@ -1,7 +1,7 @@
 <?php
     $controllers =array('pages'=>['home','error'],
                         'staffcheckpoint'=>['index','newStaffCheckpoint','addStaffCheckpoint','searchStaffCheckpoint','updateFormStaffCheckpoint','updateStaffCheckpoint','deleteConfirmStaffCheckpoint','deleteStaffCheckpoint']
-                        ,'workschedule'=>['index','newWorkSchedule','addWorkSchedule']);
+                        ,'workschedule'=>['index','newWorkSchedule','addWorkSchedule','searchWorkSchedule']);
 
     function call($controller,$action)
     {
@@ -17,6 +17,7 @@
                                     require_once("models/workscheduleModel/staffcheckpointModel.php");
                                     require_once("models/workscheduleModel/staffpositioncheckpointModel.php");
                                     require_once("models/workscheduleModel/stationModel.php");
+                                    require_once('models/aiModel.php');
                                     $controller = new wsController();
                                     break;
 
