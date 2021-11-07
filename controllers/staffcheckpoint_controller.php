@@ -47,5 +47,21 @@ class StaffCheckpointController{
         StaffCheckpointController::index();
     }
 
+    public function deleteConfirmStaffCheckpoint()
+    {
+        $staffid=$_GET['staff_c_id'];
+        $staffname=$_GET['cname'];
+        $staffcheckpoint=StaffCheckpoint::get($staffid,$staffname);
+        require_once('views/rate/deleteConfirmStaffCheckpoint.php');
+    }
+    public function deleteStaffCheckpoint()
+    {
+        $staffid=$_GET['staff_c_id'];
+        $staffname=$_GET['cname'];
+        StaffCheckpoint::delete($staffid,$staffname);
+        StaffCheckpointController::index();
+    }
+
+
 }
 ?>
