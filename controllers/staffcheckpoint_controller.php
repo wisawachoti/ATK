@@ -8,6 +8,7 @@ class StaffCheckpointController{
 
     public function newStaffCheckpoint()
     {
+        $staff_c_id = aiModel::getid("StaffCheckpoint","staff_c_id");
         $staffcheckpointList = StaffCheckpoint::getAll();
         require_once('views/staffcheckpoint/newStaffCheckpoint.php');
     }
