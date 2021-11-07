@@ -1,7 +1,7 @@
 <?php
     $controllers =array('pages'=>['home','error'],
                         'staffcheckpoint'=>['index','newStaffCheckpoint','addStaffCheckpoint','searchStaffCheckpoint','updateFormStaffCheckpoint','updateStaffCheckpoint','deleteConfirmStaffCheckpoint','deleteStaffCheckpoint']
-                        ,'workschedule'=>['index']);
+                        ,'workschedule'=>['index','newWorkSchedule','addWorkSchedule']);
 
     function call($controller,$action)
     {
