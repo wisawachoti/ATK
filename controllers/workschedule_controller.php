@@ -9,7 +9,10 @@ class wsController{
     public function newWorkSchedule()
     {
         $wsList = wsModel::getAll();
-        require_once('view/sworkschedule/newWorkSchedule.php');
+        $staffcheckpointList = StaffCheckpoint::getAll();
+        $staffpositioncheckpointList = StaffPositionCheckpoint::getAll();
+        $stationList = Station::getAll();
+        require_once('views/workschedule/newWorkSchedule.php');
     }
 
     public function addWorkSchedule()
