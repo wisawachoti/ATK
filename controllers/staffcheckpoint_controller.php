@@ -14,10 +14,10 @@ class StaffCheckpointController{
 
     public function addStaffCheckpoint()
     {
-        $staffid = $_GET['staff_c_id'];
-        $staffname = $_GET['cname'];
+        $staff_c_id = $_GET['staff_c_id'];
+        $cname = $_GET['cname'];
 
-        StaffCheckpoint::Add($staffid,$staffname);
+        StaffCheckpoint::Add($staff_c_id,$cname);
         StaffCheckpointController::index();
 
     }
@@ -30,36 +30,31 @@ class StaffCheckpointController{
 
     public function updateFormStaffCheckpoint()
     {
-        $staffid=$_GET['staff_c_id'];
-        $staffname=$_GET['cname'];
-        $staffcheckpoint=StaffCheckpoint::get($staffid,$staffname);
-        $staffcheckpointList=StaffCheckpoint::getAll();
+        $staff_c_id=$_GET['staff_c_id'];
+        $staffcheckpoint=StaffCheckpoint::get($staff_c_id);
         require_once('views/staffcheckpoint/updateFormStaffCheckpoint.php');
     }
 
     public function updateStaffCheckpoint()
     {
-        $staffid=$_GET['staff_c_id'];
-        $staffname=$_GET['cname'];
-        StaffCheckpoint::update($staffid,$staffname);
+        $staff_c_id=$_GET['staff_c_id'];
+        $cname=$_GET['cname'];
+        StaffCheckpoint::update($staff_c_id,$cname);
         StaffCheckpointController::index();
     }
 
     public function deleteConfirmStaffCheckpoint()
     {
-        $staffid=$_GET['staff_c_id'];
-        $staffname=$_GET['cname'];
-        $staffcheckpoint=StaffCheckpoint::get($staffid,$staffname);
+        $staff_c_id=$_GET['staff_c_id'];
+        $staffcheckpoint=StaffCheckpoint::get($staff_c_id);
         require_once('views/staffcheckpoint/deleteConfirmStaffCheckpoint.php');
     }
     public function deleteStaffCheckpoint()
     {
-        $staffid=$_GET['staff_c_id'];
-        $staffname=$_GET['cname'];
-        StaffCheckpoint::delete($staffid,$staffname);
+        $staff_c_id=$_GET['staff_c_id'];
+        StaffCheckpoint::delete($staff_c_id);
         StaffCheckpointController::index();
     }
-
 
 }
 ?>
