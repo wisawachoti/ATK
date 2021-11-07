@@ -57,7 +57,7 @@ class StaffCheckpoint{
         $sql = "SELECT staff_c_id , cname
         FROM StaffCheckpoint
         WHERE(staff_c_id = '$staffid' AND cname = '$staffname')
-        ORDER BY staff_c_id ASC";
+        ORDER BY staff_c_id";
         $result=$conn->query($sql);
         $my_row=$result->fetch_assoc();
         $staffid=$my_row[staff_c_id];
