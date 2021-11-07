@@ -1,5 +1,5 @@
 <form method = "get" action = "">
-    <label>รหัสเจ้าหน้าที่ <input type ="text" name="staff_c_id"/></label><br>
+    <label>รหัสเจ้าหน้าที่ <input type ="text" name="staff_c_id" value="<?php echo $staff_c_id;?>"/></label><br>
     <label>ชื่อเจ้าหน้าที่ <input type="text" name="cname"/></label><br>
 
     <input type ="hidden" name="controller" value="staffcheckpoint"/>
