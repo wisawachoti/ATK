@@ -27,5 +27,25 @@ class StaffCheckpointController{
         $staffcheckpointList=StaffCheckpoint::search($key);
         require_once('views/staffcheckpoint/index_StaffCheckpoint.php');
     }
+
+    public function updateFormStaffCheckpoint()
+    {
+        $staffid=$_GET['staff_c_id'];
+        $staffname=$_GET['cname'];
+        $staffcheckpointList=StaffCheckpoint::getAll();
+        $staffcheckpoint=StaffCheckpoint::get($staffid,$staffname);
+        require_once('views/staffcheckpoint/updateFormStaffCheckpoint.php');
+    }
+
+    public function updateRate()
+    {
+        $staffid=$_GET['staff_c_id'];
+        $staffname=$_GET['cname'];
+        $laststaffid=$_GET['laststaff_c_id'];
+        $laststaffname=$_GET['lastcname'];
+        StaffCheckpoint::update($staffid,$staffname,$laststaffid,$laststaffname);
+        StaffCheckpointController::index();
+    }
+
 }
 ?>
