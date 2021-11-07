@@ -1,6 +1,6 @@
 <form method="get" action="">
     <label>รหัสตารางงาน <input type="text" name="ws_id"/></label><br>
-    <label>วันที่ <input type = "date" name ="date" placeholder="dd-mm-yyyy" value=""/> </label><br>
+    <label>วันที่ <input type = "date" name ="date" placeholder="yyyy-mm-dd" value=""/> </label><br>
 
     <label>รายชื่อเจ้าหน้าที่<select name = "cname">
         <?php
