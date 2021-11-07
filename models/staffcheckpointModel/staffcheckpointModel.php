@@ -55,7 +55,7 @@ class StaffCheckpoint{
     public static function get($staffid,$staffname)
     {
         require("connection_connect.php");
-        $sql = "SELECT staff_c_id , cname
+        $sql = "SELECT staff_c_id,cname
         FROM StaffCheckpoint
         WHERE(staff_c_id = '$staffid' AND cname = '$staffname')
         ORDER BY staff_c_id";
