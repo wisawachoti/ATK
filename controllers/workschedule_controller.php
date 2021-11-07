@@ -8,10 +8,10 @@ class wsController{
 
     public function newWorkSchedule()
     {
-        $wsList = wsModel::getAll();
-        $staffcheckpointList = StaffCheckpoint::getAll();
+        $wsList=wsModel::getAll();
+        $staffcheckpointList = StaffCheckpoint::getall();
         $staffpositioncheckpointList = StaffPositionCheckpoint::getAll();
-        $stationList = Station::getAll();
+        $stationList = Station::getStation();
         require_once('views/workschedule/newWorkSchedule.php');
     }
 
@@ -19,10 +19,10 @@ class wsController{
     {
         $wsid = $_GET['ws_id'];
         $date = $_GET['date'];
-        $staffid = $_GET['staff_c_id'];
-        $staffpid = $_GET['staff_pc_id'];
-        $stationid = $_GET['station_id'];
-        wsModel::Add($wsid,$date,$staffid,$staffpid,$stationid);
+        $staffname = $_GET['cname'];
+        $staffpname = $_GET['name'];
+        $stationname = $_GET['s_name'];
+        wsModel::Add($wsid,$date,$staffname,$staffpname,$stationname);
         wsController::index();
 
     }
