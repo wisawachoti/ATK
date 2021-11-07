@@ -6,7 +6,7 @@ class StaffCheckpoint{
         $this->staffid = $staffid;
         $this->staffname = $staffname;
     }
-    public static function getAll()
+    public static function getall()
     {
         $staffcheckpointList=[];
         require("connection_connect.php");
