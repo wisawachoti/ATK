@@ -41,9 +41,7 @@ class StaffCheckpointController{
     {
         $staffid=$_GET['staff_c_id'];
         $staffname=$_GET['cname'];
-        $laststaffid=$_GET['laststaff_c_id'];
-        $laststaffname=$_GET['lastcname'];
-        StaffCheckpoint::update($staffid,$staffname,$laststaffid,$laststaffname);
+        StaffCheckpoint::update($staffid,$staffname);
         StaffCheckpointController::index();
     }
 
