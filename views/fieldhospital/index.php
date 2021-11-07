@@ -239,8 +239,8 @@
                 <td>$data->yellow </td> 
                 <td>$data->red</td> 
                 <td>$data->agency</td> 
-                <td>  <a href=?controller=fieldhospital&action=upd&field_hospital_id=$data->field_hospital_id&agency=$data->agency> update </a> </td>
-                <td>  <a href=?controller=detaildb&action=deleteconfirm&detailid=$offerdetail->detail_id&cp_id=$offerdetail->cp_id> delete </a> </td>            
+                <td>  <a href=?controller=fieldhospital&action=upd&field_hospital_id=$data->field_hospital_id&agency=$data->agency> UPDATE </a> </td>
+                <td>  <a href=?controller=detaildb&action=deleteconfirm&detailid=$offerdetail->detail_id&cp_id=$offerdetail->cp_id> DELETE </a> </td>            
               </tr>";
     }
     echo "</table>";
