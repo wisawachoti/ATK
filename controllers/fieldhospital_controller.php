@@ -4,12 +4,14 @@ class fhController{
 
     public function index(){
         $fhlList = fh_Model::getAll();
+        $sumList = fh_Model::getsum();
         require_once('views/fieldhospital/index.php');
         
     }
 
     public function BACK(){
         $fhlList = fh_Model::getAll();
+        $sumList = fh_Model::getsum();
         require_once('views/fieldhospital/index.php');
         
     }
@@ -29,6 +31,7 @@ class fhController{
     {
         $key = $_GET['key'];
         $fhlList = fh_Model::search($key);
+        $sumList = fh_Model::getsumone($key);
         require_once('views/fieldhospital/index.php');
     }
 
@@ -50,6 +53,23 @@ class fhController{
         
     }
 
+    public function DeleteC()
+    {
+        $key = $_GET['field_hospital_id'];
+        $fhlList = fh_Model::get($key);
+        require_once('views/fieldhospital/delete.php');
+        
+    }
+
+    public function Delete()
+    {
+
+        $field_hospital_id = $_GET['id'];
+       fh_Model::delete($field_hospital_id);
+       fhController::index();
+
+    }
+
     public function Update()
     {
         
@@ -66,6 +86,8 @@ class fhController{
 
        
     }
+
+ 
 
 
 }

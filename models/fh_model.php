@@ -86,14 +86,14 @@ class fh_Model
 
     // // =============================================================================================================================================__delete
 
-    //     public static function delete($detailid)
-    //     {
-    //         require("connection_connect.php");
-    //         $sql = "DELETE FROM offerdetail WHERE offerdetail_id = $detailid ";
-    //         $result = $conn->query($sql);
-    //         require("connection_close.php");
-    //         return "delete success $result row";
-    //     }
+        public static function delete($key)
+        {
+            require("connection_connect.php");
+            $sql = "DELETE FROM Field_hospital  WHERE field_hospital_id = '$key' ";
+            $result = $conn->query($sql);
+            require("connection_close.php");
+            return "delete success $result row";
+        }
 
 
     public static function getAll()
@@ -119,6 +119,44 @@ class fh_Model
 
         return $fhList;
     }
+
+    public static function getsum()
+    {
+        
+        require("connection_connect.php");
+        $sql = "SELECT SUM(`green`) as green ,SUM(`yellow`) as yellow ,SUM(`red`) as red ,COUNT(`field_hospital_id`) as num  FROM Field_hospital as f ";
+        $result = $conn->query($sql);
+        $my_row = $result->fetch_assoc();
+
+            $num = $my_row['num'];
+            $green = $my_row['green'];
+            $yellow = $my_row['yellow'];
+            $red = $my_row['red'];
+            
+
+        require("connection_close.php");
+        return new fh_Model($num ,$num, $green, $yellow, $red, $num);
+    }
+
+    public static function getsumone($key)
+    {
+        
+        require("connection_connect.php");
+        $sql = "SELECT SUM(`green`) as green ,SUM(`yellow`) as yellow ,SUM(`red`) as red ,COUNT(`field_hospital_id`) as num  FROM Field_hospital as f INNER JOIN agency as a ON f.agency_id = a.agency_id
+        WHERE (field_hospital_id like '%$key%' or fh_name like '%$key%' or a.agency_name like '%$key%')";
+        $result = $conn->query($sql);
+        $my_row = $result->fetch_assoc();
+
+            $num = $my_row['num'];
+            $green = $my_row['green'];
+            $yellow = $my_row['yellow'];
+            $red = $my_row['red'];
+            
+
+        require("connection_close.php");
+        return new fh_Model($num ,$num, $green, $yellow, $red, $num);
+    }
+
 
     public static function Add($field_hospital_id, $fh_name, $green, $yellow, $red,$agency_id)
     {

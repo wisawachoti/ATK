@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>Hospital</title>
+  <title>Field Hospital</title>
   <!-- Favicon -->
   <link rel="icon" href="assets/img/brand/favicon.png" type="image/png">
   <!-- Fonts -->
@@ -31,7 +31,7 @@
       <div class="sidenav-header  align-items-center">
         <a class="navbar-brand" href="javascript:void(0)">
           <img src="assets/img/brand/safety-suit.png" class="navbar-brand-img" alt="...">
-          <span class="nav-link-text">Hospital</span>
+          <span class="nav-link-text">Patient</span>
         </a>
       </div>
       <div class="navbar-inner">
@@ -39,8 +39,9 @@
         <div class="collapse navbar-collapse" id="sidenav-collapse-main">
           <!-- Nav items -->
           <ul class="navbar-nav">
+
             <li class="nav-item">
-              <a class="nav-link active" href="?controller=home&action=home">
+              <a class="nav-link " href="?controller=home&action=home">
                 <img src="assets/img/brand/monitor.png" class="navbar-brand-img" alt="...">
                 <span class="nav-link-text">| Dashboard</span>
               </a>
@@ -51,19 +52,18 @@
                 <img src="assets/img/brand/hospital-building.png" class="navbar-brand-img" alt="...">
                 <span class="nav-link-text">| Field Hospital</span>
               </a>
-
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="?controller=patient&action=index">
-                <img src="assets/img/brand/people.png" class="navbar-brand-img" alt="...">
+              <a class="nav-link active" href="?controller=patient&action=index">
+              <img src="assets/img/brand/people.png" class="navbar-brand-img" alt="...">
                 <span class="nav-link-text">| Patient</span>
               </a>
             </li>
 
             <li class="nav-item">
               <a class="nav-link" href="#">
-                <img src="assets/img/brand/report.png" class="navbar-brand-img" alt="...">
+              <img src="assets/img/brand/report.png" class="navbar-brand-img" alt="...">
                 <span class="nav-link-text">| Tele medicine</span>
               </a>
             </li>
@@ -94,9 +94,11 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-search"></i></span>
                 </div>
+                   
+                    
                 <input class="form-control" placeholder="Search" type="text" name="key">
-                <input type="hidden" name="controller" value="home" />
-                <input type="hidden" name="action" value="search" />
+                <input type="hidden" name="controller" value="fieldhospital"/>
+                <input type="hidden" name="action" value="search"/>
               </div>
             </div>
 
@@ -110,11 +112,10 @@
       </div>
     </nav>
 
-
-    <!-- Header -->
+       <!-- Header -->
     <div class="header bg-primary pb-6">
-      <div class="container-fluid">
-        <div class="header-body">
+      <div class="container-fluid ">
+        <div class="header-body ">
 
 
 
@@ -130,17 +131,17 @@
                   <div class="row">
                     <div class="col">
                       <h5 class="card-title text-uppercase text-muted mb-0">โรงพยาบาลสนาม</h5>
-                      <span class="h2 font-weight-bold mb-0">2</span>
+                      <span class="h2 font-weight-bold mb-0"><?php echo $sumList->fh_name;?></span>
                     </div>
                     <div class="col-auto">
-                      <img src="assets/img/brand/hospital-building-2.png" class="navbar-brand-img" alt="...">
+                    <img src="assets/img/brand/hospital-building-2.png" class="navbar-brand-img" alt="...">
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-
+            
             <div class="col-xl-3 col-md-6 mt-3">
               <div class="card card-stats">
 
@@ -149,11 +150,11 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">ผู้ติดเชื้อ(สีเขียว)</h5>
-                      <span class="h2 font-weight-bold mb-0">2,356</span>
+                      <h5 class="card-title text-uppercase text-muted mb-0">เตียงที่วาง(สีเขียว)</h5>
+                      <span class="h2 font-weight-bold mb-0"><?php echo $sumList->green;?></span>
                     </div>
                     <div class="col-auto">
-                      <img src="assets/img/brand/sick-3.png" class="navbar-brand-img" alt="...">
+                    <img src="assets/img/brand/bed-2.png" class="navbar-brand-img" alt="...">
                     </div>
                   </div>
                 </div>
@@ -167,11 +168,11 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">ผู้ติดเชื้อ(สีเหลือง)</h5>
-                      <span class="h2 font-weight-bold mb-0">924</span>
+                      <h5 class="card-title text-uppercase text-muted mb-0">เตียงที่วาง(สีเหลือง)</h5>
+                      <span class="h2 font-weight-bold mb-0"><?php echo $sumList->yellow;?></span>
                     </div>
                     <div class="col-auto">
-                      <img src="assets/img/brand/sick-4.png" class="navbar-brand-img" alt="...">
+                      <img src="assets/img/brand/bed-3.png" class="navbar-brand-img" alt="..."> 
                     </div>
                   </div>
                 </div>
@@ -183,11 +184,11 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">ผู้ติดเชื้อ(สีแดง)</h5>
-                      <span class="h2 font-weight-bold mb-0">500</span>
+                      <h5 class="card-title text-uppercase text-muted mb-0">เตียงที่วาง(สีแดง)</h5>
+                      <span class="h2 font-weight-bold mb-0"><?php echo $sumList->red;?></span>
                     </div>
                     <div class="col-auto">
-                      <img src="assets/img/brand/sick-5.png" class="navbar-brand-img" alt="...">
+                      <img src="assets/img/brand/bed-4.png" class="navbar-brand-img" alt="...">
                     </div>
                   </div>
                 </div>
@@ -198,18 +199,19 @@
       </div>
     </div>
 
-
-
     <!-- Page content -->
     <div class="container-fluid mt--6">
       <div class="row">
 
-        <div class="col-xl-8">
+        <div class="col-xl-12">
           <div class="card">
             <div class="card-header border-0">
               <div class="row align-items-center">
                 <div class="col">
                   <h3 class="mb-0">โรงพยาบาลสนาม</h3>
+                </div>
+                <div class="col text-right">
+                  <a href="?controller=fieldhospital&action=an" class="btn btn-sm btn-primary">new</a>
                 </div>
               </div>
             </div>
@@ -219,27 +221,31 @@
                 <thead class="thead-light">
                   <tr>
                     <th scope="col">ID</th>
+                    <th scope="col">Field Hospital</th>
                     <th scope="col">Name</th>
-                    <th scope="col">Green</th>
-                    <th scope="col">Yellow</th>
-                    <th scope="col">Red</th>
-                    <th scope="col">Agency</th>
-
+                    <th scope="col">ATKID</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Update</th>
+                    <th scope="col">Delete</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <?php foreach ($fhlList as $data) {
-                    echo "<tr> 
-                <td>$data->field_hospital_id</td> 
+                <?php foreach ($ptList as $data) {
+                  echo "<tr>
+                <td>$data->admit_fh_id</td>  
                 <td>$data->fh_name</td> 
-                <td>$data->green</td> 
-                <td>$data->yellow </td> 
-                <td>$data->red</td> 
-                <td>$data->agency</td> 
+                <td>$data->people_name</td> 
+                <td>$data->atk_id</td> 
+                <td>$data->date </td> 
+                <td>$data->time</td> 
+                
+                <td>  <a href=?controller=fieldhospital&action=upd> UPDATE </a> </td>
+                <td>  <a href=?controller=fieldhospital&action=DeleteC> DELETE </a> </td>            
               </tr>";
-                  }
-                  echo "</table>";
-                  ?>
+    }
+    echo "</table>";
+    ?>
                 </tbody>
               </table>
             </div>

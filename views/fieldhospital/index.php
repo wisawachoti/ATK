@@ -55,7 +55,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="?controller=patient&action=index">
               <img src="assets/img/brand/people.png" class="navbar-brand-img" alt="...">
                 <span class="nav-link-text">| Patient</span>
               </a>
@@ -131,7 +131,7 @@
                   <div class="row">
                     <div class="col">
                       <h5 class="card-title text-uppercase text-muted mb-0">โรงพยาบาลสนาม</h5>
-                      <span class="h2 font-weight-bold mb-0">2</span>
+                      <span class="h2 font-weight-bold mb-0"><?php echo $sumList->fh_name;?></span>
                     </div>
                     <div class="col-auto">
                     <img src="assets/img/brand/hospital-building-2.png" class="navbar-brand-img" alt="...">
@@ -151,7 +151,7 @@
                   <div class="row">
                     <div class="col">
                       <h5 class="card-title text-uppercase text-muted mb-0">เตียงที่วาง(สีเขียว)</h5>
-                      <span class="h2 font-weight-bold mb-0">2,356</span>
+                      <span class="h2 font-weight-bold mb-0"><?php echo $sumList->green;?></span>
                     </div>
                     <div class="col-auto">
                     <img src="assets/img/brand/bed-2.png" class="navbar-brand-img" alt="...">
@@ -169,7 +169,7 @@
                   <div class="row">
                     <div class="col">
                       <h5 class="card-title text-uppercase text-muted mb-0">เตียงที่วาง(สีเหลือง)</h5>
-                      <span class="h2 font-weight-bold mb-0">924</span>
+                      <span class="h2 font-weight-bold mb-0"><?php echo $sumList->yellow;?></span>
                     </div>
                     <div class="col-auto">
                       <img src="assets/img/brand/bed-3.png" class="navbar-brand-img" alt="..."> 
@@ -185,7 +185,7 @@
                   <div class="row">
                     <div class="col">
                       <h5 class="card-title text-uppercase text-muted mb-0">เตียงที่วาง(สีแดง)</h5>
-                      <span class="h2 font-weight-bold mb-0">500</span>
+                      <span class="h2 font-weight-bold mb-0"><?php echo $sumList->red;?></span>
                     </div>
                     <div class="col-auto">
                       <img src="assets/img/brand/bed-4.png" class="navbar-brand-img" alt="...">
@@ -240,7 +240,7 @@
                 <td>$data->red</td> 
                 <td>$data->agency</td> 
                 <td>  <a href=?controller=fieldhospital&action=upd&field_hospital_id=$data->field_hospital_id&agency=$data->agency> UPDATE </a> </td>
-                <td>  <a href=?controller=detaildb&action=deleteconfirm&detailid=$offerdetail->detail_id&cp_id=$offerdetail->cp_id> DELETE </a> </td>            
+                <td>  <a href=?controller=fieldhospital&action=DeleteC&field_hospital_id=$data->field_hospital_id> DELETE </a> </td>            
               </tr>";
     }
     echo "</table>";
