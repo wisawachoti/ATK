@@ -1,9 +1,9 @@
 <table border="1">
 <tr><td>รหัสตารางงาน</td>
 <td>วันที่</td>
-<tr><td>รหัสเจ้าหน้าที่</td>
+<td>รหัสเจ้าหน้าที่</td>
 <td>ชื่อเจ้าหน้าที่</td>
-<tr><td>รหัสตำแหน่ง</td>
+<td>รหัสตำแหน่ง</td>
 <td>ชื่อตำแหน่ง</td>
 <td>รหัสจุดตรวจ</td>
 <td>ชื่อจุดตรวจ</td>
@@ -16,7 +16,7 @@
     <button type="submit" name="action" value="searchWorkSchedule">ค้นหา</button>
 </form>
 <?php
-    foreach($workscheduleList as $workschedule)
+    foreach($wsList as $workschedule)
     {
         echo"
         <tr><td>$workschedule->wsid</td>
