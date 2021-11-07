@@ -8,6 +8,7 @@ class wsController{
 
     public function newWorkSchedule()
     {
+        $wsid = aiModel::getid("WorkSchedule","ws_id");
         $wsList=wsModel::getAll();
         $staffcheckpointList = StaffCheckpoint::getall();
         $staffpositioncheckpointList = StaffPositionCheckpoint::getAll();
@@ -25,6 +26,13 @@ class wsController{
         wsModel::Add($wsid,$date,$staffname,$staffpname,$stationname);
         wsController::index();
 
+    }
+
+    public function searchWorkSchedule()
+    {
+        $key=$_GET['key'];
+        $wsList=wsModel::search($key);
+        require_once('views/workschedule/index_workschedule.php');
     }
 }
 ?>
