@@ -11,6 +11,7 @@
             case "pages" : $controller= new PagesController();
                         break;
             case "staffcheckpoint" : require_once("models/staffcheckpointModel/staffcheckpointModel.php");
+                                    require_once('models/aiModel.php');
                                     $controller = new StaffCheckpointController();
                                     break;
             case "workschedule" : require_once("models/workscheduleModel/workscheduleModel.php");
