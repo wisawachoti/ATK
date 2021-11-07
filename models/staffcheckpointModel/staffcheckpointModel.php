@@ -50,5 +50,30 @@ class StaffCheckpoint{
         return $staffcheckpointList;
 
     }
+
+    public static function get($staffid,$staffname)
+    {
+        require("connection_connect.php");
+        $sql = "SELECT staff_c_id , cname
+        FROM StaffCheckpoint
+        WHERE(staff_c_id = '$staffid' AND cname = '$staffname')
+        ORDER BY staff_c_id ASC";
+        $result=$conn->query($sql);
+        $my_row=$result->fetch_assoc();
+        $staffid=$my_row[staff_c_id];
+        $staffname=$my_row[cname];
+
+        return new StaffCheckpoint($staffid,$staffname);
+    }
+
+    public static function update($staffid , $staffname , $laststaffid , $laststaffname)
+    {
+        require("connection_connect.php");
+        $sql="UPDATE StaffCheckpoint SET staff_c_id='$staffid',cname='$staffname'
+        WHERE  staff_c_id='$laststaffid'AND cname='$laststaffname'";
+        $result=$conn->query($sql);
+        require("connection_close.php");
+        return "update success $result row";
+    }
 }
 ?>
