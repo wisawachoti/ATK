@@ -6,11 +6,11 @@ class Station{
         $this->stationid = $stationid;
         $this->stationname = $stationname;
     }
-    public static function getAll()
+    public static function getStation()
     {
         $stationList=[];
         require("connection_connect.php");
-        $sql="SELECT station_id , s_name FROM Station
+        $sql="SELECT station_id , s_name FROM station
         ORDER BY station_id";
         $result =$conn->query($sql);
         while($my_row=$result->fetch_assoc())
