@@ -43,7 +43,7 @@
     public static function Add($wsid , $date , $staffid , $staffpid , $stationid)
     {
         require("connection_connect.php");
-        $sql="insert into WorkSchedule(ws_id,date,staff_c_id,staff_pc_id,station_id )values
+        $sql="insert into WorkSchedule(ws_id,date,staff_c_id,staff_pc_id,station_id)values
         ('$wsid','$date','$staffid','$staffpid','$stationid')";
         $result =$conn->query($sql);
         require("connection_close.php");
