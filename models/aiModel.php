@@ -1,8 +1,6 @@
 <?php
 
 class aiModel{
-
-
     public function __construct (){
 
     }
@@ -21,7 +19,7 @@ class aiModel{
 
 
         if(substr($tail, -1) == 9){
-            if(substr($tail, 1,1)){
+            if(substr($tail, 1,1) == 9){
                 $x = (string)(intval(substr($tail, 0,1))+1);
                 $y = '0';
                 $z = '0';
