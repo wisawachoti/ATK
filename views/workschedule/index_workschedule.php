@@ -28,8 +28,8 @@
         <td>$workschedule->stationid</td>
         <td>$workschedule->stationname</td>
 
-        <td><a href=?controller=workschedule&action=updateFormWorkSchedule& ws_id = $workschedule->wsid&date = $date->date&staff_c_id=$workschedule->staffid&cname=$workschedule->staffname&staff_pc_id=$workschedule->staffpid&name=$workschedule->staffpname&station_id=$workschedule->stationid&s_name=$workschedule->stationname>update</td>
-        <td><a href=?controller=workschedule&action=deleteConfirmWorkSchedule& ws_id = $workschedule->wsid&date = $date->date&staff_c_id=$workschedule->staffid&cname=$workschedule->staffname&staff_pc_id=$workschedule->staffpid&name=$workschedule->staffpname&station_id=$workschedule->stationid&s_name=$workschedule->stationname>delete</td>
+        <td><a href=?controller=workschedule&action=updateFormWorkSchedule&ws_id=$workschedule->wsid&date=$workschedule->date&name=$workschedule->staffpname&s_name=$workschedule->stationname&staffid=$workschedule->staffid&cname=$workschedule->staffname>update</td>
+        <td><a href=?controller=workschedule&action=deleteConfirmWorkSchedule&ws_id=$workschedule->wsid&date=$workschedule->date&name=$workschedule->staffpname&s_name=$workschedule->stationname&staffid=$workschedule->staffid&cname=$workschedule->staffname>delete</td>
         ";
     }
     echo "</table>";
