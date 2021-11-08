@@ -62,7 +62,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="?controller=symptom&action=index">
                 <img src="assets/img/brand/report.png" class="navbar-brand-img" alt="...">
                 <span class="nav-link-text">| Tele medicine</span>
               </a>

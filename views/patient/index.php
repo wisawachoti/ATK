@@ -31,7 +31,7 @@
       <div class="sidenav-header  align-items-center">
         <a class="navbar-brand" href="javascript:void(0)">
           <img src="assets/img/brand/safety-suit.png" class="navbar-brand-img" alt="...">
-          <span class="nav-link-text">Patient</span>
+          <span class="nav-link-text">Hospital</span>
         </a>
       </div>
       <div class="navbar-inner">
@@ -62,7 +62,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="?controller=symptom&action=index">
               <img src="assets/img/brand/report.png" class="navbar-brand-img" alt="...">
                 <span class="nav-link-text">| Tele medicine</span>
               </a>

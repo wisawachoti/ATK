@@ -48,7 +48,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link active" href="?controller=fieldhospital&action=index">
+              <a class="nav-link" href="?controller=fieldhospital&action=index">
                 <img src="assets/img/brand/hospital-building.png" class="navbar-brand-img" alt="...">
                 <span class="nav-link-text">| Field Hospital</span>
               </a>
@@ -62,7 +62,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="?controller=symptom&action=index">
+              <a class="nav-link  active" href="?controller=symptom&action=index">
               <img src="assets/img/brand/report.png" class="navbar-brand-img" alt="...">
                 <span class="nav-link-text">| Tele medicine</span>
               </a>
@@ -97,7 +97,7 @@
                    
                     
                 <input class="form-control" placeholder="Search" type="text" name="key">
-                <input type="hidden" name="controller" value="fieldhospital"/>
+                <input type="hidden" name="controller" value="symptom"/>
                 <input type="hidden" name="action" value="search"/>
               </div>
             </div>
@@ -211,7 +211,7 @@
                   <h3 class="mb-0">โรงพยาบาลสนาม</h3>
                 </div>
                 <div class="col text-right">
-                  <a href="?controller=fieldhospital&action=an" class="btn btn-sm btn-primary">new</a>
+                  <a href="?controller=symptom&action=an" class="btn btn-sm btn-primary">new</a>
                 </div>
               </div>
             </div>
@@ -221,26 +221,26 @@
                 <thead class="thead-light">
                   <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Green</th>
-                    <th scope="col">Yellow</th>
-                    <th scope="col">Red</th>
-                    <th scope="col">Agency</th>
+                    <th scope="col">Patient ID</th>
+                    <th scope="col">Temperature</th>
+                    <th scope="col">Date</th>
+                    
                     <th scope="col">Update</th>
                     <th scope="col">Delete</th>
                   </tr>
                 </thead>
                 <tbody>
-                <?php foreach ($fhlList as $data) {
+                <?php foreach ($spList as $data) {
                   echo "<tr>
-                <td>$data->field_hospital_id</td>  
-                <td>$data->fh_name</td> 
-                <td>$data->green</td> 
-                <td>$data->yellow </td> 
-                <td>$data->red</td> 
-                <td>$data->agency</td> 
-                <td>  <a href=?controller=fieldhospital&action=upd&field_hospital_id=$data->field_hospital_id&agency=$data->agency> UPDATE </a> </td>
-                <td>  <a href=?controller=fieldhospital&action=DeleteC&field_hospital_id=$data->field_hospital_id> DELETE </a> </td>            
+                <td>$data->symptoms_fh_id</td>  
+                <td>$data->admit_fh_id</td> 
+                <td>$data->temperature</td> 
+                <td>$data->date</td> 
+                
+                
+                
+                <td>  <a href=?controller=symptom&action=upd&key=$data->symptoms_fh_id> UPDATE </a> </td>
+                <td>  <a href=?controller=symptom&action=DeleteC&key=$data->symptoms_fh_id> DELETE </a> </td>            
               </tr>";
     }
     echo "</table>";
