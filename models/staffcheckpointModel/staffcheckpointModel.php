@@ -6,8 +6,6 @@
     {
         $this->staff_c_id = $staff_c_id;
         $this->cname = $cname;
-
-
     }
 
     public static function getAll()
