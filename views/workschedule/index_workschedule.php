@@ -29,7 +29,7 @@
         <td>$workschedule->stationname</td>
 
         <td><a href=?controller=workschedule&action=updateFormWorkSchedule&ws_id=$workschedule->wsid&date=$workschedule->date&name=$workschedule->staffpname&s_name=$workschedule->stationname&staffid=$workschedule->staffid&cname=$workschedule->staffname>update</td>
-        <td><a href=?controller=workschedule&action=deleteConfirmWorkSchedule&ws_id=$workschedule->wsid&date=$workschedule->date&name=$workschedule->staffpname&s_name=$workschedule->stationname&staffid=$workschedule->staffid&cname=$workschedule->staffname>delete</td>
+        <td><a href=?controller=workschedule&action=deleteConfirmWorkSchedule&ws_id=$workschedule->wsid&date=$workschedule->date&name=$workschedule->staffpname&s_name=$workschedule->stationname&cname=$workschedule->staffid>delete</td>
         ";
     }
     echo "</table>";
