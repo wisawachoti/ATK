@@ -69,7 +69,7 @@ class wsController{
         $staffname = $_GET['cname'];
         $staffpname = $_GET['name'];
         $stationname = $_GET['s_name'];
-        $staffid = $_GET['staffid'];
+        $staffcheckpoint = StaffCheckpoint::getname($staffname);
         $workschedule = wsModel::get($wsid , $date,$staffname , $staffpname ,$stationname);
         require_once('views/workschedule/deleteConfirmWorkSchedule.php');
     }
