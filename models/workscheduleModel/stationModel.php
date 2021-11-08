@@ -15,8 +15,8 @@ class Station{
         $result =$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
-            $stationid=$my_row[station_id];
-            $stationname=$my_row[s_name];
+            $stationid=$my_row['station_id'];
+            $stationname=$my_row['s_name'];
             $stationList[]=new Station($stationid,$stationname);
         }
         require("connection_close.php");
