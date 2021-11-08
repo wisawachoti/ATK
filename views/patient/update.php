@@ -49,53 +49,54 @@
                     <img src="assets/img/brand/hospital-building-2.png" class="navbar-brand-img" alt="...">
                 </div>
 
-                <h1 class="form__title" style="text-align:center">Update Hospital</h1>
+                <h1 class="form__title" style="text-align:center">Update Patient</h1>
 
                 <div class="form__div">
-                    <input type="text" class="form__input" placeholder=" " name="id" value="<?php echo $fhlList->field_hospital_id; ?>">
+                    <input type="text" class="form__input" placeholder=" " name="id" value="<?php echo $key ?>">
                     <label for="" class="form__label">ID</label>
                 </div>
 
-                <div class="form__div">
-                    <input type="text" class="form__input" placeholder=" " name="fh_name" value="<?php echo $fhlList->fh_name ; ?>">
-                    <label for="" class="form__label">Name</label>
-                </div>
 
                 <div class="form__div">
-                    <input type="number" class="form__input" placeholder=" " name="green" value="<?php echo $fhlList->green ; ?>">
-                    <label for="" class="form__label">Green</label>
-                </div>
-
-                <div class="form__div">
-                    <input type="number" class="form__input" placeholder=" " name="yellow" value="<?php echo $fhlList->yellow ; ?>">
-                    <label for="" class="form__label">Yellow</label>
-                </div>
-
-                <div class="form__div">
-                    <input type="number" class="form__input" placeholder=" " name="red" value="<?php echo $fhlList->red; ?>">
-                    <label for="" class="form__label">Red</label>
-                </div>
-
-                <div class="form__div">
-                <label for="" class="">Agency</label>
-                    <select name="agency">
-                        <?php foreach ($agList as $data) {
-                            echo "<option value=$data->agency_id";
-                            if($data->agency_name==$fhlList->agency)
+                <label for="" class="">Field hospital</label>
+                    <select name="Field_hospital">
+                        <?php foreach ($fhlList as $data) {
+                            echo "<option value=$data->field_hospital_id";
+                            if($ptList->fh_name==$data->fh_name)
                             {
                                 echo " selected='selected'";
                             }
-                            echo "> $data->agency_name</option>";
+                            echo "> $data->fh_name</option>";
                         } ?>
                     </select>
                     
                 </div>
 
+                <div class="form__div">
+                <label for="" class="">ATK</label>
+                    <select name="atk">
+                        <?php foreach ($atk as $data) {
+                            echo "<option value=$data->atk_id";
+                            if($ptList->atk_id==$data->atk_id)
+                            {
+                                echo " selected='selected'";
+                            }
+                            echo "> $data->people_name</option>";
+                        } ?>
+                    </select>
+                    
+                </div> 
+
+                <div class="form__div">
+                    <input type="date" class="form__input" placeholder=" " name="date" value="<?php echo $ptList->date?>">
+                    <label for="" class="form__label">Date</label>
+                </div>
 
 
 
 
-                <input type="hidden" name="controller" value="fieldhospital" />
+                <input type="hidden" name="bid" value="<?php echo $key ?>">
+                <input type="hidden" name="controller" value="patient" />
                 <input type="hidden" name="key" value="<?php echo $fhlList->field_hospital_id; ?>" />
                 <div style="float:left">
                     <input type="submit" class="form__button2" name="action" value="BACK">

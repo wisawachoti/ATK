@@ -52,48 +52,51 @@
                     <img src="assets/img/brand/hospital-building-2.png" class="navbar-brand-img" alt="...">
                 </div>
 
-                <h1 class="form__title" style="text-align:center">New Hospital</h1>
+                <h1 class="form__title" style="text-align:center">New Patient</h1>
                 <div class="form__div">
                     <input type="text" class="form__input" placeholder=" " name="id" value="<?php echo $id; ?>">
                     <label for="" class="form__label">ID</label>
                 </div>
 
                 <div class="form__div">
-                    <input type="text" class="form__input" placeholder=" " name="fh_name" >
-                    <label for="" class="form__label">Name</label>
-                </div>
-
-                <div class="form__div">
-                    <input type="number" class="form__input" placeholder=" " name="green">
-                    <label for="" class="form__label">Green</label>
-                </div>
-
-                <div class="form__div">
-                    <input type="number" class="form__input" placeholder=" " name="yellow">
-                    <label for="" class="form__label">Yellow</label>
-                </div>
-
-                <div class="form__div">
-                    <input type="number" class="form__input" placeholder=" " name="red">
-                    <label for="" class="form__label">Red</label>
-                </div>
-
-                <div class="form__div">
-                <label for="" class="">Agency</label>
-                    <select name="agency">
-                        <?php foreach ($agList as $data) {
-                            echo "<option value=$data->agency_id";
-                            echo "> $data->agency_name</option>";
+                <label for="" class="">Field hospital</label>
+                    <select name="Field_hospital">
+                        <?php foreach ($fhlList as $data) {
+                            echo "<option value=$data->field_hospital_id";
+                            echo "> $data->fh_name</option>";
                         } ?>
                     </select>
                     
                 </div>
 
+                <div class="form__div">
+                <label for="" class="">ATK</label>
+                    <select name="atk">
+                        <?php foreach ($atk as $data) {
+                            echo "<option value=$data->atk_id";
+                            echo "> $data->people_name</option>";
+                        } ?>
+                    </select>
+                    
+                </div> 
+
+                <div class="form__div">
+                    <input type="date" class="form__input" placeholder=" " name="date">
+                    <label for="" class="form__label">Date</label>
+                </div>
+<!-- 
+                <div class="form__div">
+                    <input type="time" class="form__input" placeholder=" " name="time">
+                    <label for="" class="form__label">time</label>
+                </div> -->
 
 
 
 
-                <input type="hidden" name="controller" value="fieldhospital" />
+
+
+
+                <input type="hidden" name="controller" value="patient" />
                 <div style="float:left">
                     <input type="submit" class="form__button2" name="action" value="BACK">
                 </div>

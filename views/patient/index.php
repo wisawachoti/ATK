@@ -97,7 +97,7 @@
                    
                     
                 <input class="form-control" placeholder="Search" type="text" name="key">
-                <input type="hidden" name="controller" value="fieldhospital"/>
+                <input type="hidden" name="controller" value="patient"/>
                 <input type="hidden" name="action" value="search"/>
               </div>
             </div>
@@ -211,7 +211,7 @@
                   <h3 class="mb-0">โรงพยาบาลสนาม</h3>
                 </div>
                 <div class="col text-right">
-                  <a href="?controller=fieldhospital&action=an" class="btn btn-sm btn-primary">new</a>
+                  <a href="?controller=patient&action=an" class="btn btn-sm btn-primary">new</a>
                 </div>
               </div>
             </div>
@@ -221,11 +221,11 @@
                 <thead class="thead-light">
                   <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Field Hospital</th>
                     <th scope="col">Name</th>
+                    <th scope="col">Field Hospital</th>
                     <th scope="col">ATKID</th>
                     <th scope="col">Date</th>
-                    <th scope="col">Time</th>
+                    
                     <th scope="col">Update</th>
                     <th scope="col">Delete</th>
                   </tr>
@@ -234,14 +234,14 @@
                 <?php foreach ($ptList as $data) {
                   echo "<tr>
                 <td>$data->admit_fh_id</td>  
-                <td>$data->fh_name</td> 
                 <td>$data->people_name</td> 
+                <td>$data->fh_name</td> 
                 <td>$data->atk_id</td> 
                 <td>$data->date </td> 
-                <td>$data->time</td> 
                 
-                <td>  <a href=?controller=fieldhospital&action=upd> UPDATE </a> </td>
-                <td>  <a href=?controller=fieldhospital&action=DeleteC> DELETE </a> </td>            
+                
+                <td>  <a href=?controller=patient&action=upd&key=$data->admit_fh_id> UPDATE </a> </td>
+                <td>  <a href=?controller=patient&action=DeleteC&key=$data->admit_fh_id> DELETE </a> </td>            
               </tr>";
     }
     echo "</table>";

@@ -2,7 +2,7 @@
 $controllers = array(
     'home' => ['home', 'error', 'search'],
     'fieldhospital' => ['index', 'an', 'search', 'BACK', 'NEW', 'upd', 'Update', 'Delete', 'DeleteC'],
-    'patient' => ['index'],
+    'patient' => ['index', 'an', 'search', 'BACK', 'NEW', 'upd', 'Update', 'Delete', 'DeleteC'],
     'page3' => ['index']
 );
 
@@ -28,6 +28,7 @@ function call($controller, $action)
             require_once("models/pt_model.php");
             require_once("models/fh_model.php");
             require_once("models/ai_model.php");
+            require_once("models/atk_model.php");
             $controller = new PateintController();
             break;
     }

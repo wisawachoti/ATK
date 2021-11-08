@@ -49,42 +49,37 @@
                     <img src="assets/img/brand/hospital-building-2.png" class="navbar-brand-img" alt="...">
                 </div>
 
-                <h1 class="form__title" style="text-align:center">Delete Hospital</h1>
+                <h1 class="form__title" style="text-align:center">Delete Patient</h1>
 
                 <div class="form__div">
-                    <input type="text" class="form__input" placeholder=" " name="id" value="<?php echo $fhlList->field_hospital_id; ?>">
+                    <input type="text" class="form__input" placeholder=" " name="id" value="<?php echo $ptList->admit_fh_id; ?>">
                     <label for="" class="form__label">ID</label>
                 </div>
 
                 <div class="form__div">
-                    <input type="text" class="form__input" placeholder=" " name="fh_name" value="<?php echo $fhlList->fh_name ; ?>">
+                    <input type="text" class="form__input" placeholder=" " name="people_name" value="<?php echo $ptList->people_name ; ?>">
                     <label for="" class="form__label">Name</label>
                 </div>
 
                 <div class="form__div">
-                    <input type="number" class="form__input" placeholder=" " name="green" value="<?php echo $fhlList->green ; ?>">
-                    <label for="" class="form__label">Green</label>
+                    <input type="text" class="form__input" placeholder=" " name="fh_name" value="<?php echo $ptList->fh_name ; ?>">
+                    <label for="" class="form__label">Field Hospital</label>
                 </div>
 
                 <div class="form__div">
-                    <input type="number" class="form__input" placeholder=" " name="yellow" value="<?php echo $fhlList->yellow ; ?>">
-                    <label for="" class="form__label">Yellow</label>
+                    <input type="text" class="form__input" placeholder=" " name="atk_id" value="<?php echo $ptList->atk_id ; ?>">
+                    <label for="" class="form__label">ATKID</label>
                 </div>
 
                 <div class="form__div">
-                    <input type="number" class="form__input" placeholder=" " name="red" value="<?php echo $fhlList->red; ?>">
-                    <label for="" class="form__label">Red</label>
-                </div>
-
-                <div class="form__div">
-                    <input type="text" class="form__input" placeholder=" " name="agency" value="<?php echo $fhlList->agency ; ?>">
-                    <label for="" class="form__label">Agency</label>
+                    <input type="text" class="form__input" placeholder=" " name="date" value="<?php echo $ptList->date; ?>">
+                    <label for="" class="form__label">DATE</label>
                 </div>
 
 
 
-                <input type="hidden" name="controller" value="fieldhospital" />
-                <input type="hidden" name="key" value="<?php echo $fhlList->field_hospital_id; ?>" />
+                <input type="hidden" name="key" value="<?php echo $ptList->field_hospital_id; ?>" />
+                <input type="hidden" name="controller" value="patient" />
                 <div style="float:left">
                     <input type="submit" class="form__button2" name="action" value="BACK">
                 </div>
