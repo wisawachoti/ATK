@@ -15,8 +15,8 @@ class StaffCheckpoint{
         $result =$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
-            $staffid=$my_row[staff_c_id];
-            $staffname=$my_row[cname];
+            $staffid=$my_row['staff_c_id'];
+            $staffname=$my_row['cname'];
             $staffcheckpointList[]=new StaffCheckpoint($staffid,$staffname);
         }
         require("connection_close.php");
