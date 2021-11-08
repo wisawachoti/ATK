@@ -1,7 +1,7 @@
 <?php echo "<br>Are you sure to delete this workschedule<br>";
         echo "รหัสตารางงาน : $wsid <br>";
         echo "วันที่ : $date <br>";
-        echo "ชื่อเจ้าหน้าที่ : $staffname<br>";
+        echo "ชื่อเจ้าหน้าที่ : $staffcheckpoint->staffname<br>";
         echo "ชื่อตำแหน่ง : $staffpname<br>";
         echo "ชื่อตำแหน่ง : $stationname<br>";
 ?>
