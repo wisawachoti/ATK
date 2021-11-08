@@ -22,5 +22,18 @@ class StaffCheckpoint{
         require("connection_close.php");
         return $staffcheckpointList;
     }
+
+    public static function getname($staffname)
+    {
+        require("connection_connect.php");
+        $sql="SELECT * FROM StaffCheckpoint
+        WHERE `staff_c_id` = '$staffname'";
+        $result=$conn->query($sql);
+        $my_row=$result->fetch_assoc();
+        $staffid = $my_row['staff_c_id'];
+        $staffname = $my_row['cname'];
+        require("connection_close.php");
+        return new StaffCheckpoint($staffid,$staffname);
+    }
 }
 ?>
