@@ -1,5 +1,5 @@
 <?php
-    $controllers =array('pages'=>['home','error'],
+    $controllers =array('pages'=>['home','error','searchwsHome'],
                         'staffcheckpoint'=>['index','newStaffCheckpoint','addStaffCheckpoint','searchStaffCheckpoint','updateFormStaffCheckpoint','updateStaffCheckpoint','deleteConfirmStaffCheckpoint','deleteStaffCheckpoint']
                         ,'workschedule'=>['index','newWorkSchedule','addWorkSchedule','searchWorkSchedule','updateFormWorkSchedule','updateWorkSchedule','deleteConfirmWorkSchedule','deleteWorkSchedule']);
 
@@ -8,8 +8,10 @@
         require_once("controllers/".$controller."_controller.php");
         switch($controller)
         {
-            case "pages" : $controller= new PagesController();
-                        break;
+            case "pages" : require_once('models/workscheduleModel/wshomeModel.php');
+                            $controller= new PagesController();
+
+                             break;
             case "staffcheckpoint" : require_once("models/staffcheckpointModel/staffcheckpointModel.php");
                                     require_once('models/aiModel.php');
                                     $controller = new StaffCheckpointController();
