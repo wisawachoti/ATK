@@ -1,6 +1,10 @@
 <form method="get" action="">
 <label>รหัสผลตรวจRT <input type="text" name="rt_test_id" 
-        value="<?php echo $RTTest->rt_test_id;?>"/></label><br>
+value="<?php echo $RTTest->rt_test_id;?>"/></label><br>
+<label>วันที่ตรวจRT <input type="date" name="rt_test_date" 
+value="<?php echo $RTTest->rt_test_date;?>"/></label><br>
+<label>วันที่ตรวจRT <input type="time" name="rt_test_time" 
+value="<?php echo $RTTest->rt_test_time;?>"/></label><br>
 
 
 

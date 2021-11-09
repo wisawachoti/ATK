@@ -1,7 +1,7 @@
 <form method="get" action="">
 <label>รหัสผลตรวจRT <input type="text" name="rt_test_id"/></label><br>
-<label>วันที่ตรวจRT <input type="text" name="rt_test_date"/></label><br>
-<label>เวลาที่ตรวจRT <input type="text" name="rt_test_time"/></label><br>
+<label>วันที่ตรวจRT <input type="date" name="rt_test_date"/></label><br>
+<label>เวลาที่ตรวจRT <input type="time" name="rt_test_time"/></label><br>
 
 <label>รหัสATK<select name ="noatk">
     <?php foreach($ATK_List as $atk)

@@ -1,7 +1,4 @@
-<?php 
-    echo "ธนากร ค้วนเครือ    6220500636";
-    
-?>
+
 <table border=1>
 <br>new StaffLab <a href=?controller=StaffLab&action=newStaffLab> click</a><br>
 <br>
