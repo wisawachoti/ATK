@@ -1,3 +1,4 @@
+<p style="font-size:35px;color:purple;font-family:TH SarabunSPK">ตารางงาน</p>
 <table border="1">
 <tr><td>รหัสตารางงาน</td>
 <td>วันที่</td>
