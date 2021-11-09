@@ -19,7 +19,6 @@
         $rt_test_id = $_GET['rt_test_id'];
         $rt_test_date = $_GET['rt_test_date'];
         $rt_test_time = $_GET['rt_test_time'];
-        $rt_test_id = $_GET['rt_test_id'];
         $atk_id = $_GET['atk_id'];
         $ws_id = $_GET['ws_id'];
         $lab_id = $_GET['lab_id'];
@@ -51,7 +50,6 @@
         $rt_test_id = $_GET['rt_test_id'];
         $rt_test_date = $_GET['rt_test_date'];
         $rt_test_time = $_GET['rt_test_time'];
-        $rt_test_id = $_GET['rt_test_id'];
         $atk_id = $_GET['atk_id'];
         $ws_id = $_GET['ws_id'];
         $lab_id = $_GET['lab_id'];
@@ -65,6 +63,13 @@
         $rt_test_id=$_GET['rt_test_id'];
         $RTTest=RTTest::get($rt_test_id);
         require_once('./views/RTTest/deleteConfirm.php');
+    }
+
+    public function delete()
+    {
+        $rt_test_id = $_GET['rt_test_id'];
+        RTTest::delete($rt_test_id);
+        RTTest_Controller::index();
     }
 
 

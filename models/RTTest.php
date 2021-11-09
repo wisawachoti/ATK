@@ -103,6 +103,15 @@
         return ;
      }
 
+     public static function delete($rt_test_id)
+     {
+         require_once("connect_database.php");
+         $sql="DELETE FROM RTTest WHERE rt_test_id='$rt_test_id' ";
+         $result=$conn->query($sql);
+         require("connection_close.php");
+         return ;
+     }
+
 
 
 
