@@ -2,6 +2,13 @@
 <br>new RTTest <a href=?controller=RTTest&action=newRTTest> click</a><br>
 <br>
 
+<form method="get" action="">
+        <input type="text" name="key">
+        <input type="hidden" name="controller" value="RTTest">
+        <button type="submit" name="action" value="search">
+search</button>
+</form>
+
 
 <tr>
     <td>rt_test_id</td>
