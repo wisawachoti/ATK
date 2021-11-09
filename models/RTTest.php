@@ -82,16 +82,21 @@
         WHERE `rt_test_id` = '$rt_test_id'";
         $result=$conn->query($sql);
         $my_row=$result->fetch_assoc();
+        $rt_test_id = $my_row['rt_test_id'];
+        $rt_test_date = $my_row['rt_test_date'];
+        $rt_test_time = $my_row['rt_test_time'];
+        $atk_id = $my_row['atk_id'];
+        $ws_id = $my_row['ws_id'];
         $lab_id = $my_row['lab_id'];
-        $lab_name = $my_row['lab_name'];
+        $stafflab_id = $my_row['stafflab_id'];
         require("connection_close.php");
-        return new LabTest($lab_id,$lab_name);
+        return new LabTest($rt_test_id,$rt_test_date,$rt_test_time,$atk_id,$ws_id,$lab_id,$stafflab_id);
     }
 
-    public static function update($rt_test_id)
+    public static function update($rt_test_id,$rt_test_date,$rt_test_time,$atk_id,$ws_id,$lab_id,$stafflab_id)
      {
         require("connect_database.php");
-        $sql="UPDATE RTTest SET `rt_test_id`='$rt_test_id'
+        $sql="UPDATE RTTest SET `rt_test_date`='$rt_test_date',`rt_test_time`='$rt_test_time',`atk_id`='$atk_id',`ws_id`='$ws_id',`;lab_id`='$lab_id',`stafflab_id`='$stafflab_id'
         WHERE `rt_test_id`= '$rt_test_id' ";
         $result=$conn->query($sql);
         require("connection_close.php");

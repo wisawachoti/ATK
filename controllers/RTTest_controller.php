@@ -40,6 +40,8 @@
     {
         $rt_test_id=$_GET['rt_test_id'];
         $RTTest=RTTest::get($rt_test_id);
+        $ATK_List = ATK::getAll();
+        $WorkSchedule_List = WorkSchedule::getAll();
         require_once('./views/RTTest/updateForm.php');
        
     }
@@ -58,6 +60,12 @@
         RTTest_Controller::index();
     }
     
+    public function deleteConfirm()
+    {
+        $rt_test_id=$_GET['rt_test_id'];
+        $RTTest=RTTest::get($rt_test_id);
+        require_once('./views/RTTest/deleteConfirm.php');
+    }
 
 
 
