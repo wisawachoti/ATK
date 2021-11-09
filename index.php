@@ -13,7 +13,6 @@
 <html>
     <head></head>
     <body>
-        <?php echo "controller=".$controller," action=".$action ; ?>
         <br>[<a href="?controller=pages&action=home">หน้าหลัก</a>]
             [<a href="?controller=staffcheckpoint&action=index">ข้อมูลเจ้าหน้าที่</a>]
             [<a href="?controller=workschedule&action=index">ตารางงาน</a>]
