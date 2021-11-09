@@ -2,8 +2,8 @@
         echo "รหัสตารางงาน : $wsid <br>";
         echo "วันที่ : $date <br>";
         echo "ชื่อเจ้าหน้าที่ : $staffcheckpoint->staffname<br>";
-        echo "ชื่อตำแหน่ง : $staffpname<br>";
-        echo "ชื่อตำแหน่ง : $stationname<br>";
+        echo "ตำแหน่ง : $staffpname<br>";
+        echo "สถานที่ปฏิบัติงาน : $stationname<br>";
 ?>
     <form method="get" action="">
     <input type="hidden" name="controller" value="workschedule"/>
