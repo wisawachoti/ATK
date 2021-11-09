@@ -5,6 +5,7 @@ class HomeController{
     public function home(){
         $fhlList = fh_Model::getAlldis();
         $sumList = get_Model::getsum_dis();
+        $sum2List = get_Model::getsum_pt();
         require_once('views/home/home.php');
         
     }

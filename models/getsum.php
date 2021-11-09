@@ -55,6 +55,7 @@ class get_Model
 
         require("connection_close.php");
         return new get_Model($num1, $num2, $num3, $num4);
+        
     }
 
     public static function getsumone_pt($key)

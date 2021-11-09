@@ -225,7 +225,7 @@
               <table class="table align-items-center table-flush">
                 <thead class="thead-light">
                   <tr>
-                    <th scope="col">ID</th>
+                    
                     <th scope="col">Name</th>
                     <th scope="col">Green</th>
                     <th scope="col">Yellow</th>
@@ -237,7 +237,7 @@
                 <tbody>
                   <?php foreach ($fhlList as $data) {
                     echo "<tr> 
-                <td>$data->field_hospital_id</td> 
+                
                 <td>$data->fh_name</td> 
                 <td>$data->green</td> 
                 <td>$data->yellow </td> 
@@ -280,15 +280,15 @@
                       GREEN
                     </th>
                     <td>
-                      1,480
+                    <?php echo $sum2List->num2 ?>
                     </td>
                     <td>
                       <div class="d-flex align-items-center">
-                        <span class="mr-2">60%</span>
+                        <span class="mr-2"><?php  echo  number_format((intval($sum2List->num2)/(intval($sum2List->num2)+intval($sum2List->num3)+intval($sum2List->num4)))*100, 2, '.', '')  ?>%</span>
                         <div>
                           <div class="progress">
-                            <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="60"
-                              aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                            <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="<?php  echo (intval($sum2List->num2)/(intval($sum2List->num2)+intval($sum2List->num3)+intval($sum2List->num4)))*100  ?>"
+                              aria-valuemin="0" aria-valuemax="100" style="width: <?php  echo (intval($sum2List->num2)/(intval($sum2List->num2)+intval($sum2List->num3)+intval($sum2List->num4)))*100  ?>%;"></div>
                           </div>
                         </div>
                       </div>
@@ -300,15 +300,15 @@
                       YELLOW
                     </th>
                     <td>
-                      5,480
+                    <?php echo $sum2List->num3 ?>
                     </td>
                     <td>
                       <div class="d-flex align-items-center">
-                        <span class="mr-2">70%</span>
+                        <span class="mr-2"><?php  echo number_format((intval($sum2List->num3)/(intval($sum2List->num2)+intval($sum2List->num3)+intval($sum2List->num4)))*100, 2, '.', '')  ?>%</span>
                         <div>
                           <div class="progress">
-                            <div class="progress-bar bg-gradient-warning" role="progressbar" aria-valuenow="70"
-                              aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+                            <div class="progress-bar bg-gradient-warning" role="progressbar" aria-valuenow="<?php  echo (intval($sum2List->num3)/(intval($sum2List->num2)+intval($sum2List->num3)+intval($sum2List->num4)))*100  ?>"
+                              aria-valuemin="0" aria-valuemax="100" style="width: <?php  echo (intval($sum2List->num3)/(intval($sum2List->num2)+intval($sum2List->num3)+intval($sum2List->num4)))*100  ?>%;"></div>
                           </div>
                         </div>
                       </div>
@@ -320,15 +320,15 @@
                       RED
                     </th>
                     <td>
-                      4,807
+                    <?php echo $sum2List->num4 ?>
                     </td>
                     <td>
                       <div class="d-flex align-items-center">
-                        <span class="mr-2">80%</span>
+                        <span class="mr-2"><?php  echo number_format((intval($sum2List->num4)/(intval($sum2List->num2)+intval($sum2List->num3)+intval($sum2List->num4)))*100, 2, '.', '')  ?>%</span>
                         <div>
                           <div class="progress">
-                            <div class="progress-bar bg-gradient-danger" role="progressbar" aria-valuenow="80"
-                              aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                            <div class="progress-bar bg-gradient-danger" role="progressbar" aria-valuenow="<?php  echo (intval($sum2List->num4)/(intval($sum2List->num2)+intval($sum2List->num3)+intval($sum2List->num4)))*100  ?>"
+                              aria-valuemin="0" aria-valuemax="100" style="width: <?php  echo (intval($sum2List->num4)/(intval($sum2List->num2)+intval($sum2List->num3)+intval($sum2List->num4)))*100  ?>%;"></div>
                           </div>
                         </div>
                       </div>

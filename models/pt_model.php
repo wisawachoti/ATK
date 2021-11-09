@@ -35,6 +35,7 @@ class patient_Model
         
         as stepn  ON p.people_id = stepn.people_id)
         as step ON step.atk_id = am.atk_id)as step1 ON step1.field_hospital_id = fh.field_hospital_id
+        ORDER BY admit_fh_id
         ";
         $result = $conn->query($sql);
         while ($my_row = $result->fetch_assoc()) {
@@ -89,6 +90,7 @@ class patient_Model
 
 
          WHERE (admit_fh_id like '%$key%' or fh_name like '%$key%' or date like '%$key%'or step1.people_name like '%$key%'or step1.atk_id  like '%$key%' or step1.color  like '%$key%') 
+         ORDER BY admit_fh_id
          ";
          
         $result = $conn->query($sql);
@@ -129,7 +131,9 @@ class patient_Model
         as stepn  ON p.people_id = stepn.people_id)
         as step ON step.atk_id = am.atk_id)as step1 ON step1.field_hospital_id = fh.field_hospital_id
         
-        WHERE admit_fh_id = '$key' ";
+        WHERE admit_fh_id = '$key' 
+        
+        ORDER BY admit_fh_id";
         $result = $conn->query($sql);
         $my_row = $result->fetch_assoc();
 
