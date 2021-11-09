@@ -32,8 +32,16 @@
     {
         $key=$_GET['key'];
         $RTTest_List=RTTest::search($key);
-        require_once('./views/LabTest/index_LabTest.php');
+        require_once('./views/RTTest/index_RTTest.php');
 
+    }
+
+    public function updateForm()
+    {
+        $rt_test_id=$_GET['rt_test_id'];
+        $RTTest=RTTest::get($rt_test_id);
+        require_once('./views/RTTest/updateForm.php');
+       
     }
     
 

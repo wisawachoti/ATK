@@ -1,7 +1,7 @@
 <?php
 $controllers = array('pages'=> ['home','error'], 'StaffLab'=>['index','search','newStaffLab','addStaffLab','updateForm','update','deleteConfirm','delete'],
                     'LabTest'=>['index','search','newLabTest','addLabTest','updateForm','update','deleteConfirm','delete'],
-                'RTTest'=> ['index','newRTTest','addRTTest','search']);
+                'RTTest'=> ['index','newRTTest','addRTTest','search','updateForm']);
 
 function call($controller,$action){
     require_once("./controllers/".$controller."_controller.php");

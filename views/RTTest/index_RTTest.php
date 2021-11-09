@@ -32,7 +32,8 @@ search</button>
         <td>$RT->ws_id</td>
         <td>$RT->lab_id</td>
         <td>$RT->stafflab_id</td>
-        
+        <td><a href=?controller=RTTest&action=updateForm&rt_test_id=$RT->rt_test_id>update</a></td>
+        <td><a href=?controller=RTTest&action=deleteConfirm&rt_test_id=$RT->rt_test_id>delete</a></td>
         
         </tr>";
 }
