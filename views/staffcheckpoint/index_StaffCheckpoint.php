@@ -1,3 +1,4 @@
+<p style="font-size:35px;color:purple;font-family:TH SarabunSPK">ข้อมูลเจ้าหน้าที่</p>
 <table border=1>
 เพิ่มเจ้าหน้าที่ [<a href="?controller=staffcheckpoint&action=newStaffCheckpoint">click</a>]
 <br>
