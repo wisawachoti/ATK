@@ -93,11 +93,11 @@
         return new RTTest($rt_test_id,$rt_test_date,$rt_test_time,$atk_id,$ws_id,$lab_id,$stafflab_id);
     }
 
-    public static function update($rt_test_id,$rt_test_date,$rt_test_time,$atk_id,$ws_id,$lab_id,$stafflab_id)
+    public static function update($rt_test_id,$rt_test_ID)
      {
         require("connect_database.php");
-        $sql="UPDATE RTTest SET `rt_test_date`='$rt_test_date',`rt_test_time`='$rt_test_time',`atk_id`='$atk_id',`ws_id`='$ws_id',`;lab_id`='$lab_id',`stafflab_id`='$stafflab_id'
-        WHERE `rt_test_id`= '$rt_test_id' ";
+        $sql="UPDATE RTTest SET `rt_test_id`='$rt_test_id'
+        WHERE `rt_test_id`= '$rt_test_ID'  ";
         $result=$conn->query($sql);
         require("connection_close.php");
         return ;
