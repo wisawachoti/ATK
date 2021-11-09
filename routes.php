@@ -19,7 +19,11 @@ function call($controller,$action){
                             break;
 
         case "RTTest" : require_once("./models/RTTest.php");
-                            $controller = new RTTest_Controller();
+                        require_once("./models/ATK.php");
+                        require_once("./models/WorkSchedule.php");
+                        require_once("./models/LabTest.php");
+                        require_once("./models/StaffLab.php");
+                        $controller = new RTTest_Controller();
                             break;
     }
     $controller->{$action}();

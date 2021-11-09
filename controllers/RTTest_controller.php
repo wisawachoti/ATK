@@ -7,21 +7,20 @@
     }
 
     public function newRTTest(){
-        $RTTest_List = RTTest::getAll();
+        $ATK_List = ATK::getAll();
+        $WorkSchedule_List= WorkSchedule::getAll();
+        $LabTest_List = LabTest::getAll();
+        $StaffLab_List = StaffLab::getAll();
         require_once('./views/RTTest/newRTTest.php');
+        
     }
 
-    public function addRTTest(){
-        $staff_lab_id = $_GET['staff_lab_id'];
-        $staff_lab_name = $_GET['staff_lab_name'];
-        StaffLab::Add($staff_lab_id,$staff_lab_name);
-        StaffLab_Controller::index();
-    }
-
+    
 
 
 
 }
+?>
 
 
 
