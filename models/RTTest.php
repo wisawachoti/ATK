@@ -88,6 +88,16 @@
         return new LabTest($lab_id,$lab_name);
     }
 
+    public static function update($rt_test_id)
+     {
+        require("connect_database.php");
+        $sql="UPDATE RTTest SET `rt_test_id`='$rt_test_id'
+        WHERE `rt_test_id`= '$rt_test_id' ";
+        $result=$conn->query($sql);
+        require("connection_close.php");
+        return ;
+     }
+
 
 
 

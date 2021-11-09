@@ -43,6 +43,20 @@
         require_once('./views/RTTest/updateForm.php');
        
     }
+
+    public function update()
+    {
+        $rt_test_id = $_GET['rt_test_id'];
+        $rt_test_date = $_GET['rt_test_date'];
+        $rt_test_time = $_GET['rt_test_time'];
+        $rt_test_id = $_GET['rt_test_id'];
+        $atk_id = $_GET['atk_id'];
+        $ws_id = $_GET['ws_id'];
+        $lab_id = $_GET['lab_id'];
+        $stafflab_id = $_GET['stafflab_id'];
+        RTTest::update($rt_test_id,$rt_test_date,$rt_test_time,$atk_id,$ws_id,$lab_id,$stafflab_id);
+        RTTest_Controller::index();
+    }
     
 
 
