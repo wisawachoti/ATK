@@ -86,7 +86,7 @@
 
 
           <!-- Search form -->
-          <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
+          <!-- <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
 
             <div class="form-group mb-0">
 
@@ -103,7 +103,7 @@
             <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
               <span aria-hidden="true">×</span>
             </button>
-          </form>
+          </form> -->
 
 
         </div>
@@ -115,7 +115,6 @@
     <div class="header bg-primary pb-6">
       <div class="container-fluid">
         <div class="header-body">
-
 
 
           <!-- Card stats -->
@@ -130,10 +129,30 @@
                   <div class="row">
                     <div class="col">
                       <h5 class="card-title text-uppercase text-muted mb-0">โรงพยาบาลสนาม</h5>
-                      <span class="h2 font-weight-bold mb-0">2</span>
+                      <span class="h2 font-weight-bold mb-0"><?php echo $sumList->num1;?></span>
                     </div>
                     <div class="col-auto">
-                      <img src="assets/img/brand/hospital-building-2.png" class="navbar-brand-img" alt="...">
+                    <img src="assets/img/brand/hospital-building-2.png" class="navbar-brand-img" alt="...">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="col-xl-3 col-md-6 mt-3">
+              <div class="card card-stats">
+
+
+                <!-- Card body -->
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">เตียงที่เหลือ(สีเขียว)</h5>
+                      <span class="h2 font-weight-bold mb-0"><?php echo $sumList->num2;?></span>
+                    </div>
+                    <div class="col-auto">
+                    <img src="assets/img/brand/bed-2.png" class="navbar-brand-img" alt="...">
                     </div>
                   </div>
                 </div>
@@ -149,51 +168,39 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">ผู้ติดเชื้อ(สีเขียว)</h5>
-                      <span class="h2 font-weight-bold mb-0">2,356</span>
+                      <h5 class="card-title text-uppercase text-muted mb-0">เตียงที่เหลือ(สีเหลือง)</h5>
+                      <span class="h2 font-weight-bold mb-0"><?php echo $sumList->num3;?></span>
                     </div>
                     <div class="col-auto">
-                      <img src="assets/img/brand/sick-3.png" class="navbar-brand-img" alt="...">
+                      <img src="assets/img/brand/bed-3.png" class="navbar-brand-img" alt="..."> 
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-xl-3 col-md-6 mt-3">
-              <div class="card card-stats">
 
 
-                <!-- Card body -->
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">ผู้ติดเชื้อ(สีเหลือง)</h5>
-                      <span class="h2 font-weight-bold mb-0">924</span>
-                    </div>
-                    <div class="col-auto">
-                      <img src="assets/img/brand/sick-4.png" class="navbar-brand-img" alt="...">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
             <div class="col-xl-3 col-md-6 mt-3">
               <div class="card card-stats">
                 <!-- Card body -->
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">ผู้ติดเชื้อ(สีแดง)</h5>
-                      <span class="h2 font-weight-bold mb-0">500</span>
+                      <h5 class="card-title text-uppercase text-muted mb-0">เตียงที่เหลือ(สีแดง)</h5>
+                      <span class="h2 font-weight-bold mb-0"><?php echo $sumList->num4;?></span>
                     </div>
                     <div class="col-auto">
-                      <img src="assets/img/brand/sick-5.png" class="navbar-brand-img" alt="...">
+                      <img src="assets/img/brand/bed-4.png" class="navbar-brand-img" alt="...">
                     </div>
                   </div>
                 </div>
+
               </div>
             </div>
+
+            
           </div>
+
         </div>
       </div>
     </div>
@@ -246,33 +253,31 @@
           </div>
         </div>
 
-        <!--         
+                
         <div class="col-xl-4">
           <div class="card">
             <div class="card-header border-0">
               <div class="row align-items-center">
                 <div class="col">
-                  <h3 class="mb-0">Social traffic</h3>
-                </div>
-                <div class="col text-right">
-                  <a href="#!" class="btn btn-sm btn-primary">See all</a>
+                  <h3 class="mb-0">Palient CASE</h3>
                 </div>
               </div>
             </div>
             <div class="table-responsive">
-              Projects table 
+              
               <table class="table align-items-center table-flush">
-                <thead class="thead-light">
+              <thead class="thead-light">
                   <tr>
-                    <th scope="col">Referral</th>
-                    <th scope="col">Visitors</th>
+                    <th scope="col">CASE</th>
+                    <th scope="col">TOTAL</th>
                     <th scope="col"></th>
                   </tr>
                 </thead>
                 <tbody>
+
                   <tr>
                     <th scope="row">
-                      Facebook
+                      GREEN
                     </th>
                     <td>
                       1,480
@@ -282,16 +287,17 @@
                         <span class="mr-2">60%</span>
                         <div>
                           <div class="progress">
-                            <div class="progress-bar bg-gradient-danger" role="progressbar" aria-valuenow="60"
+                            <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="60"
                               aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
                           </div>
                         </div>
                       </div>
                     </td>
                   </tr>
+
                   <tr>
                     <th scope="row">
-                      Facebook
+                      YELLOW
                     </th>
                     <td>
                       5,480
@@ -301,16 +307,17 @@
                         <span class="mr-2">70%</span>
                         <div>
                           <div class="progress">
-                            <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="70"
+                            <div class="progress-bar bg-gradient-warning" role="progressbar" aria-valuenow="70"
                               aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
                           </div>
                         </div>
                       </div>
                     </td>
                   </tr>
+
                   <tr>
                     <th scope="row">
-                      Google
+                      RED
                     </th>
                     <td>
                       4,807
@@ -320,56 +327,20 @@
                         <span class="mr-2">80%</span>
                         <div>
                           <div class="progress">
-                            <div class="progress-bar bg-gradient-primary" role="progressbar" aria-valuenow="80"
+                            <div class="progress-bar bg-gradient-danger" role="progressbar" aria-valuenow="80"
                               aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
                           </div>
                         </div>
                       </div>
                     </td>
                   </tr>
-                  <tr>
-                    <th scope="row">
-                      Instagram
-                    </th>
-                    <td>
-                      3,678
-                    </td>
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <span class="mr-2">75%</span>
-                        <div>
-                          <div class="progress">
-                            <div class="progress-bar bg-gradient-info" role="progressbar" aria-valuenow="75"
-                              aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      twitter
-                    </th>
-                    <td>
-                      2,645
-                    </td>
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <span class="mr-2">30%</span>
-                        <div>
-                          <div class="progress">
-                            <div class="progress-bar bg-gradient-warning" role="progressbar" aria-valuenow="30"
-                              aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
+
+                  
                 </tbody>
               </table>
             </div>
           </div>
-        </div> -->
+        </div>
 
       </div>
 

@@ -14,6 +14,7 @@ function call($controller, $action)
             require_once("models/ag_model.php");
             require_once("models/fh_model.php");
             require_once("models/ai_model.php");
+            require_once("models/getsum.php");
             $controller = new HomeController();
             break;
 
@@ -29,6 +30,7 @@ function call($controller, $action)
             require_once("models/fh_model.php");
             require_once("models/ai_model.php");
             require_once("models/atk_model.php");
+            require_once("models/getsum.php");
             $controller = new PateintController();
             break;
 

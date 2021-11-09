@@ -130,8 +130,8 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">โรงพยาบาลสนาม</h5>
-                      <span class="h2 font-weight-bold mb-0"><?php echo $sumList->fh_name;?></span>
+                      <h5 class="card-title text-uppercase text-muted mb-0">จำนวนผู้ป่วย</h5>
+                      <span class="h2 font-weight-bold mb-0"><?php echo $sumList->num1;?></span>
                     </div>
                     <div class="col-auto">
                     <img src="assets/img/brand/hospital-building-2.png" class="navbar-brand-img" alt="...">
@@ -150,11 +150,11 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">เตียงที่วาง(สีเขียว)</h5>
-                      <span class="h2 font-weight-bold mb-0"><?php echo $sumList->green;?></span>
+                      <h5 class="card-title text-uppercase text-muted mb-0">จำนวนผู้ป่วย(สีเขียว)</h5>
+                      <span class="h2 font-weight-bold mb-0"><?php echo $sumList->num2;?></span>
                     </div>
                     <div class="col-auto">
-                    <img src="assets/img/brand/bed-2.png" class="navbar-brand-img" alt="...">
+                    <img src="assets/img/brand/sick-3.png" class="navbar-brand-img" alt="...">
                     </div>
                   </div>
                 </div>
@@ -168,11 +168,11 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">เตียงที่วาง(สีเหลือง)</h5>
-                      <span class="h2 font-weight-bold mb-0"><?php echo $sumList->yellow;?></span>
+                      <h5 class="card-title text-uppercase text-muted mb-0">จำนวนผู้ป่วย(สีเหลือง)</h5>
+                      <span class="h2 font-weight-bold mb-0"><?php echo $sumList->num3;?></span>
                     </div>
                     <div class="col-auto">
-                      <img src="assets/img/brand/bed-3.png" class="navbar-brand-img" alt="..."> 
+                      <img src="assets/img/brand/sick-4.png" class="navbar-brand-img" alt="..."> 
                     </div>
                   </div>
                 </div>
@@ -184,11 +184,11 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">เตียงที่วาง(สีแดง)</h5>
-                      <span class="h2 font-weight-bold mb-0"><?php echo $sumList->red;?></span>
+                      <h5 class="card-title text-uppercase text-muted mb-0">จำนวนผู้ป่วย(สีแดง)</h5>
+                      <span class="h2 font-weight-bold mb-0"><?php echo $sumList->num4;?></span>
                     </div>
                     <div class="col-auto">
-                      <img src="assets/img/brand/bed-4.png" class="navbar-brand-img" alt="...">
+                      <img src="assets/img/brand/sick-5.png" class="navbar-brand-img" alt="...">
                     </div>
                   </div>
                 </div>
@@ -208,7 +208,7 @@
             <div class="card-header border-0">
               <div class="row align-items-center">
                 <div class="col">
-                  <h3 class="mb-0">โรงพยาบาลสนาม</h3>
+                  <h3 class="mb-0">รายชื่อผู้ป่วย</h3>
                 </div>
                 <div class="col text-right">
                   <a href="?controller=patient&action=an" class="btn btn-sm btn-primary">new</a>
@@ -224,6 +224,7 @@
                     <th scope="col">Name</th>
                     <th scope="col">Field Hospital</th>
                     <th scope="col">ATKID</th>
+                    <th scope="col">Color</th>
                     <th scope="col">Date</th>
                     
                     <th scope="col">Update</th>
@@ -237,6 +238,7 @@
                 <td>$data->people_name</td> 
                 <td>$data->fh_name</td> 
                 <td>$data->atk_id</td> 
+                <td>$data->color</td> 
                 <td>$data->date </td> 
                 
                 

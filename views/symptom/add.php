@@ -70,7 +70,7 @@
                 </div>
 
                 <div class="form__div">
-                    <input type="number" class="form__input" placeholder=" " name="temperature" >
+                    <input type="number"  step="0.01" class="form__input" placeholder=" " name="temperature" >
                     <label for="" class="form__label">Temperature</label>
                 </div>
 

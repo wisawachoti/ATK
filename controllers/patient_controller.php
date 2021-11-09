@@ -4,7 +4,7 @@ class PateintController{
     
     public function index(){
         $ptList = patient_Model::getAll();
-        $sumList = fh_Model::getsum();
+        $sumList = get_Model::getsum_pt();
         require_once('views/patient/index.php');
         
     }
@@ -29,7 +29,7 @@ class PateintController{
 
     public function BACK(){
         $ptList = patient_Model::getAll();
-        $sumList = fh_Model::getsum();
+        $sumList = get_Model::getsum_pt();
         require_once('views/patient/index.php');
         
     }
@@ -38,6 +38,7 @@ class PateintController{
     {
         $key = $_GET['key'];
         $ptList = patient_Model::search($key);
+        $sumList = get_Model::getsumone_pt($key);
         require_once('views/patient/index.php');
     }
 

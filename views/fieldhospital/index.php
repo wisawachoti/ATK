@@ -150,7 +150,7 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">เตียงที่วาง(สีเขียว)</h5>
+                      <h5 class="card-title text-uppercase text-muted mb-0">เตียงทั้งหมด(สีเขียว)</h5>
                       <span class="h2 font-weight-bold mb-0"><?php echo $sumList->green;?></span>
                     </div>
                     <div class="col-auto">
@@ -168,7 +168,7 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">เตียงที่วาง(สีเหลือง)</h5>
+                      <h5 class="card-title text-uppercase text-muted mb-0">เตียงทั้งหมด(สีเหลือง)</h5>
                       <span class="h2 font-weight-bold mb-0"><?php echo $sumList->yellow;?></span>
                     </div>
                     <div class="col-auto">
@@ -184,7 +184,7 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">เตียงที่วาง(สีแดง)</h5>
+                      <h5 class="card-title text-uppercase text-muted mb-0">เตียงทั้งหมด(สีแดง)</h5>
                       <span class="h2 font-weight-bold mb-0"><?php echo $sumList->red;?></span>
                     </div>
                     <div class="col-auto">
