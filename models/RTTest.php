@@ -90,7 +90,7 @@
         $lab_id = $my_row['lab_id'];
         $stafflab_id = $my_row['stafflab_id'];
         require("connection_close.php");
-        return new LabTest($rt_test_id,$rt_test_date,$rt_test_time,$atk_id,$ws_id,$lab_id,$stafflab_id);
+        return new RTTest($rt_test_id,$rt_test_date,$rt_test_time,$atk_id,$ws_id,$lab_id,$stafflab_id);
     }
 
     public static function update($rt_test_id,$rt_test_date,$rt_test_time,$atk_id,$ws_id,$lab_id,$stafflab_id)
