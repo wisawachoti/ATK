@@ -31,3 +31,26 @@
     }
     echo "</table>";
 ?>
+
+
+<table border="1">
+<tr><td>รหัสตารางงาน</td>
+<td>วันที่</td>
+<td>ชื่อตำแหน่ง</td>
+<td>จำนวน</td>
+
+
+<p style="font-size:20px;color:black;font-family:TH SarabunSPK">จำนวนตำแหน่งในตารางงานล่าสุด</p>
+<?php
+    foreach($pList as $staffp)
+    {
+        echo"
+        <tr><td>$staffp->wsid</td>
+        <td>$staffp->date</td>
+        <td>$staffp->staffpname</td>
+        <td>$staffp->stationid</td>
+
+        ";
+    }
+    echo "</table>";
+?>
