@@ -12,11 +12,7 @@
 <td>ชื่อตำแหน่ง</td>
 <td>รหัสจุดตรวจ</td>
 <td>ชื่อจุดตรวจ</td>
-<form method="get" action="">
-    <input type="text" name="key">
-    <input type="hidden" name="controller" value="pages"/>
-    <button type="submit" name="action" value="searchwsHome">ค้นหา</button>
-</form>
+
 <p style="font-size:20px;color:black;font-family:TH SarabunSPK">ตารางงานล่าสุด</p>
 <?php
     foreach($wsList as $wshome)
