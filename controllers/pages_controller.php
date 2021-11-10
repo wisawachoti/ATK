@@ -4,6 +4,7 @@ class  PagesController
     public function home()
     {
         $wsList=wshomeModel::getAll();
+        $pList=wshomeModel::getStaff();
         require_once('views/pages/home.php');
 
     }
