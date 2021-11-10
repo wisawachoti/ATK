@@ -14,7 +14,7 @@
     <head></head>
     <body>
         <br>[<a href="?controller=pages&action=home">หน้าหลัก</a>]
-            [<a href="?controller=staffcheckpoint&action=index">ข้อมูลเจ้าหน้าที่</a>]
+            [<a href="?controller=staffcheckpoint&action=index">รายชื่อเจ้าหน้าที่</a>]
             [<a href="?controller=workschedule&action=index">ตารางงาน</a>]
         <br>
         <?php require_once("routes.php"); ?>
