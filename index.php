@@ -60,16 +60,7 @@ else{
                     <div class="toggle">
                         <ion-icon name="reorder-four-outline"></ion-icon>
                     </div>
-                    <div class="search">
-                        <label>
-                            <form method="get" action="">
-                            <input type="text" name="key" placeholder="Search here">
-                            <input type=hidden name=controller value=Object>
-                            <button class="button button1" type="submit" name="action" value="search">
-                                <ion-icon name="search-sharp"></ion-icon></button>
-                            </form>
-                        </label>
-                    </div>
+                    
                 </div>
                 <br><br><?php require_once("routes.php");?></br>
             </div>

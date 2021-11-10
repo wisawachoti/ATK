@@ -19,18 +19,17 @@
     </head>
     <body>
         <div class="container">
-            <!--<div class="main">
-                <div class="topbar">
-                    <div class="toggle">
-                    <ion-icon name="reorder-four-outline"></ion-icon>
-                    </div>
-                    <div class="search">
+                <div class="search">
                         <label>
-                            <input type="text" placeholder="Search here">
-                            <ion-icon name="search-sharp"></ion-icon>
+                            <form method="get" action="">
+                            <input type="text" name="key" placeholder="Search here">
+                            <input type=hidden name=controller value=NesObject>
+                            <button class="button button1" type="submit" name="action" value="search">
+                                <ion-icon name="search-sharp"></ion-icon></button>
+                            </form>
                         </label>
                     </div>
-                </div>-->
+                
 
                 <div class="cardBox">
                     
@@ -79,7 +78,7 @@
                 <div class="details">
                     <div class="recentOrders">
                         <div class="cardHeader">
-                            <h2>Recent NecessaryObject</h2>
+                            <h2>All NecessaryObject</h2>
                             <a href="?controller=NesObject&action=newNesObject" class="btn">New</a>
                         </div>
                         <table>

@@ -27,6 +27,16 @@
                     </div>
                 </div>-->
 
+                <div class="search">
+                        <label>
+                            <form method="get" action="">
+                            <input type="text" name="key" placeholder="Search here">
+                            <input type=hidden name=controller value=Object>
+                            <button class="button button1" type="submit" name="action" value="search">
+                                <ion-icon name="search-sharp"></ion-icon>   </button>
+                            </form>
+                        </label>
+                    </div>
                 <div class="cardBox">
                     
                     <div class="card">
@@ -74,7 +84,7 @@
                 <div class="details">
                     <div class="recentOrders">
                         <div class="cardHeader">
-                            <h2>Recent Objects</h2>
+                            <h2>All Objects</h2>
                             <a href="?controller=Object&action=newObject" class="btn">New</a>
                         </div>
                         <table>

@@ -8,7 +8,10 @@ function call($controller,$action){
     require_once("controllers/".$controller."_controller.php");
     switch($controller)
     {
-        case"pages": $controller = new PagesController();
+        case"pages": require_once("models/OBJ.php");
+                     require_once("models/DailyLog.php");
+                     require_once("models/NesObject.php");
+                     $controller = new PagesController();
                      break;
         case"Object":   require_once("models/OBJ.php");
                         require_once("models/AutoID.php");

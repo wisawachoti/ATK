@@ -19,6 +19,7 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
+        
         <div class="container">
             <!--<div class="main">
                 <div class="topbar">
@@ -33,6 +34,16 @@
                     </div>
                 </div>-->
 
+                <div class="search">
+                        <label>
+                            <form method="get" action="">
+                            <input type="text" name="key" placeholder="Search here">
+                            <input type=hidden name=controller value=DailyLog>
+                            <button class="button button1" type="submit" name="action" value="search">
+                                <ion-icon name="search-sharp"></ion-icon></button>
+                            </form>
+                        </label>
+                    </div>
                 <div class="cardBox">
                     
                     <div class="card">
@@ -80,7 +91,7 @@
                 <div class="details">
                     <div class="recentOrders">
                         <div class="cardHeader">
-                            <h2>Recent DailyLog</h2>
+                            <h2>All DailyLog</h2>
                             <a href="?controller=DailyLog&action=newDailyLog" class="btn">New</a>
                         </div>
                         <table>
