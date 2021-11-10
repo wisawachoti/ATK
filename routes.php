@@ -11,7 +11,8 @@
         require_once("controllers/".$controller."_controller.php");
         switch($controller)
         {
-            case "pages": $controller = new pagescontroller();
+            case "pages": require_once("models/FinalModel.php");
+                $controller = new pagescontroller();
             break;
             
             case "medicine":    require_once("models/medicineModel/medicineModel.php");
