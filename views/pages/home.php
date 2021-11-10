@@ -1,5 +1,10 @@
-<p class="space"> Welcome to our Home <br></p>
-<p class="spf">
-    <br>I'm Thanakorn Kuankure 6220500636
-    
-</p>
+<style>
+.b{
+        text-align: center;
+        font-size: 60px;
+}
+</style>
+<div class = "b">
+    welcome to homepage <br>
+  ธนากร ค้วนเครือ 6220500636
+</div>
