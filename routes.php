@@ -1,5 +1,5 @@
 <?php
-    $controllers =array('pages'=>['home','error','searchwsHome'],
+    $controllers =array('pages'=>['home','error'],
                         'staffcheckpoint'=>['index','newStaffCheckpoint','addStaffCheckpoint','searchStaffCheckpoint','updateFormStaffCheckpoint','updateStaffCheckpoint','deleteConfirmStaffCheckpoint','deleteStaffCheckpoint']
                         ,'workschedule'=>['index','newWorkSchedule','addWorkSchedule','searchWorkSchedule','updateFormWorkSchedule','updateWorkSchedule','deleteConfirmWorkSchedule','deleteWorkSchedule']);
 
