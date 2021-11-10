@@ -12,12 +12,7 @@ class  PagesController
     {   require_once('views/pages/error.php');}
 
 
-    public function searchwsHome()
-    {
-        $key=$_GET['key'];
-        $wsList=wshomeModel::search($key);
-        require_once('views/pages/home.php');
-    }
+
 }
 
 ?>
