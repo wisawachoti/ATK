@@ -12,7 +12,8 @@
     {
         $staffcheckpointList = [];
         require("connection_connect.php");
-        $sql = " SELECT * FROM StaffCheckpoint ";
+        $sql = " SELECT * FROM StaffCheckpoint
+        ORDER BY staff_c_id";
         $result = $conn->query($sql);
          while($my_row = $result->fetch_assoc())
         {
